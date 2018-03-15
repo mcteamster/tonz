@@ -68,17 +68,16 @@ body {
 
     /* Subgrid */
     display: grid;
-    grid-template-rows: 1fr 5fr 1fr 1fr;
-    grid-template-columns: 10fr 9fr 1fr;
+    grid-template-rows: 10fr 2fr 1fr;
+    grid-template-columns:  10fr 4fr 1fr;
     grid-template-areas:
         "nav space margin"
-        "void space margin"
         "void title margin"
         "void description margin";
 }
 
 #homeTitle h1 {
-    font-size: 6em;
+    font-size: 4em;
     line-height: 0px;
 }
 
