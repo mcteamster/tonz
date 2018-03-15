@@ -4,12 +4,19 @@
 body {
     width: 100%;
     height: 100%;
+    min-width: 320px;
+    min-height: 480px;
     padding: 0px;
     margin: 0px;
-    background: #000;
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    line-height: 0px;
 }
 
 .siteContainer {
@@ -18,10 +25,12 @@ body {
 
 .landing {
     grid-area: landing;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .nav {
-    grid-area: nav;
     display: flex;
 }
 
@@ -30,17 +39,15 @@ body {
 }
 
 .title {
-    grid-area: title;
-}
-
-.description {
-    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1em;
 }
 
@@ -49,55 +56,48 @@ body {
     height: 10vh;
     min-height: 100px;
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: space-around;
+    flex-direction: row-reverse;
 }
 
 /* Homepage Styles */
 #homeContainer {
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "landing landing landing"
-        "one two three"
-        "footer footer footer";
+        "landing"
+        "one" 
+        "two"
+        "three"
+        "footer";
 }
 
 #homeLanding {
     height: 100vh;
-    min-height: 720px;
-    background: linear-gradient(rgb(6, 7, 80),black);
-
-    /* Subgrid */
-    display: grid;
-    grid-template-rows: 10fr 2fr 1fr;
-    grid-template-columns:  10fr 4fr 1fr;
-    grid-template-areas:
-        "nav space margin"
-        "void title margin"
-        "void description margin";
+    min-height: 480px;
+    background: rgb(255, 255, 255);
 }
 
-#homeTitle h1 {
-    font-size: 4em;
-    line-height: 0px;
+#homeTitle {
+    margin: 15vh 10vw;
 }
 
 #homeOne {
     grid-area: one;
-    height: 80vh;
-    min-height: 720px;
-    background: rgb(76, 76, 228);
+    height: 25vh;
+    min-height: 160px;
+    background: black;
+    color: white;
 }
 
 #homeTwo {
     grid-area: two;
-    height: 80vh;
-    min-height: 720px;
-    background: rgb(201, 58, 58);
+    height: 25vh;
+    min-height: 160px;
 }
 
 #homeThree {
     grid-area: three;
-    height: 80vh;
-    min-height: 720px;
-    background: rgb(48, 153, 48);
+    height: 25vh;
+    min-height: 160px;
+    background: black;
+    color: white;
 }
