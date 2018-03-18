@@ -6,12 +6,12 @@ body {
     height: 100%;
     min-width: 320px;
     min-height: 480px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
@@ -19,8 +19,15 @@ h1 {
     line-height: 0px;
 }
 
-.siteContainer {
-    display: grid;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .landing {
@@ -43,32 +50,35 @@ h1 {
 .title {
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .footer {
     grid-area: footer;
     height: 10vh;
-    min-height: 100px;
+    min-height: 60px;
+    color: white;
+    background: black;
     display: flex;
     justify-content: space-around;
-    flex-direction: row-reverse;
+    align-items: center;
 }
 
 /* Homepage Styles */
-#homeContainer {
-    grid-template-areas:
-        "landing"
-        "one" 
-        "two"
-        "three"
-        "footer";
+@media only screen and (min-width: 720px) {
+    #homeContainer {
+        display: grid;
+        grid-template-areas:
+            "landing"
+            "one" 
+            "two"
+            "three"
+            "footer";
+    }
 }
 
 #homeLanding {
@@ -79,10 +89,12 @@ h1 {
 
 #homeTitle {
     margin: 15vh 10vw;
+    align-self: flex-end;
 }
 
 #homeOne {
     grid-area: one;
+    justify-content: space-around;
     height: 30vh;
     min-height: 160px;
     font-size: 32px;
@@ -91,7 +103,8 @@ h1 {
 }
 
 #homeTwo {
-    grid-area: two;
+    grid-area: two;    
+    justify-content: space-around;
     height: 30vh;
     min-height: 160px;
     font-size: 32px;
@@ -99,6 +112,7 @@ h1 {
 
 #homeThree {
     grid-area: three;
+    justify-content: space-around;
     height: 30vh;
     min-height: 160px;
     font-size: 32px;
@@ -107,47 +121,42 @@ h1 {
 }
 
 /* About Styles */
-#aboutContainer {
-    grid-template-areas:
-        "landing"
-        "one" 
-        "two"
-        "three"
-        "four"
-        "footer";
+@media only screen and (min-width: 720px) {
+    #aboutContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "landing landing"
+            "one one" 
+            "two two"
+            "three four"
+            "five five"
+            "footer footer";
+    }
 }
 
 #aboutLanding {
-    height: 100vh;
-    min-height: 480px;
-    background: white;
-}
-
-#aboutTitle {
-    margin: 15vh 10vw;
+    background: transparent;
 }
 
 #aboutOne {
     grid-area: one;
-    height: 30vh;
-    min-height: 160px;
-    font-size: 32px;
-    background: black;
-    color: white;
+    height: 65vh;
+    min-height: 320px;
+    background: transparent;
+    color: black;
 }
 
 #aboutTwo {
     grid-area: two;
     height: 30vh;
     min-height: 160px;
-    font-size: 32px;
 }
 
 #aboutThree {
     grid-area: three;
     height: 30vh;
-    min-height: 160px;
-    font-size: 32px;
+    min-height: 320px;
     background: black;
     color: white;
 }
@@ -155,6 +164,13 @@ h1 {
 #aboutFour {
     grid-area: four;
     height: 30vh;
-    min-height: 160px;
-    font-size: 32px;
+    min-height: 320px;
+    background: black;
+    color: white;
+}
+
+#aboutFive {
+    grid-area: five;
+    height: 90vh;
+    min-height: 480px;
 }
