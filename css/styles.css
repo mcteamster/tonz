@@ -57,6 +57,20 @@ a {
     flex-direction: column;
 }
 
+.branch {
+    display: flex;
+    border: 1px solid black;
+}
+
+.leaf {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: black;
+    color: white;
+    line-height: 100px;
+}
+
 .footer {
     grid-area: footer;
     height: 10vh;
@@ -173,4 +187,13 @@ a {
     grid-area: five;
     height: 90vh;
     min-height: 480px;
+}
+
+#skillTree {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
