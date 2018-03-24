@@ -50,6 +50,7 @@ a {
 
 .nav a {
     padding: 1em 2em;
+    font-weight: bold;
 }
 
 @media only screen and (orientation: portrait) {
@@ -67,19 +68,6 @@ a {
 .content {
     display: flex;
     flex-direction: column;
-}
-
-.branch {
-    display: flex;
-    border: 1px solid black;
-}
-
-.leaf {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    background: black;
-    color: white;
 }
 
 .footer {
@@ -127,10 +115,18 @@ a {
     color: white;
 }
 
+#homeOne:hover {
+    background: darkred;
+}
+
 #homeTwo {
     grid-area: b;    
     justify-content: space-around;
     min-height: 30vh;
+}
+
+#homeTwo:hover {
+    background: darkred;
 }
 
 #homeThree {
@@ -141,19 +137,18 @@ a {
     color: white;
 }
 
+#homeThree:hover {
+    background: darkred;
+}
+
 /* About Styles */
 @media only screen and (orientation: landscape) {
     #aboutContainer {
-        background-image: url('../img/aboutBgd.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
         display: grid;
-
         grid-template-columns: 1fr 4fr 4fr 1fr;
         grid-template-areas:
             "landing landing landing landing"
-            "x a a y" 
+            "x a a y"
             "x b b y"
             "x c d y"
             "x e e y"
@@ -161,9 +156,16 @@ a {
     }
 }
 
+#aboutContainer {
+    background-image: url('../img/aboutBgd.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 #aboutLanding {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     min-height: 5vh;
 }
 
@@ -183,14 +185,14 @@ a {
 #aboutThree {
     grid-area: c;
     min-height: 30vh;
-    background: black;
+    background: rgba(0,0,0,0.8);
     color: white;
 }
 
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: black;
+    background: rgba(0,0,0,0.8);
     color: white;
 }
 
@@ -202,9 +204,20 @@ a {
 
 #skillTree {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    align-content: space-around;
+    min-height: 80vh;
+}
+
+#branch {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+#branch li {
+    width: 100px;
+    height: 100px;
+    margin: 2vw;
+    background: black;
+    color: white;
 }
