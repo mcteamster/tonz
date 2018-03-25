@@ -4,8 +4,8 @@
 body {
     width: 100%;
     height: 100%;
-    min-width: 320px;
-    min-height: 480px;
+    min-width: 480px;
+    min-height: 720px;
     padding: 0;
     margin: 0;
     background: rgb(255, 255, 255);
@@ -15,13 +15,13 @@ body {
 }
 
 h1 {
-    font-size: 8vh;
-    line-height: 0px;
+    font-size: calc(12px + 8vh);
+    margin: 0;
 }
 
 h2 {
-    font-size: 3vh;
-    line-height: 0px;
+    font-size: calc(12px + 2vh);
+    margin: 0;
 }
 
 ul {
@@ -44,8 +44,7 @@ a {
 
 .nav {
     display: flex;
-    justify-content: space-between;
-    width: 320px;
+    justify-content: flex-start;
 }
 
 .nav a {
@@ -55,7 +54,7 @@ a {
 
 @media only screen and (orientation: portrait) {
     .nav {
-        width: 100vw;
+        width: 100%;
         justify-content: space-around;
     }
 }
@@ -148,11 +147,15 @@ a {
         grid-template-columns: 1fr 4fr 4fr 1fr;
         grid-template-areas:
             "landing landing landing landing"
-            "x a a y"
+            "a a a y"
             "x b b y"
             "x c d y"
             "x e e y"
             "footer footer footer footer";
+    }
+    #aboutOne h1 {
+        margin: 0px 2vw;
+        align-self: flex-start;
     }
 }
 
@@ -164,35 +167,36 @@ a {
 }
 
 #aboutLanding {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     min-height: 5vh;
 }
 
 #aboutOne {
     grid-area: a;
     min-height: 35vh;
-    background: rgba(255,255,255,0.5);
-    color: black;    
+    background: rgba(255,255,255,0);
+    color: white;
 }
 
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0);
+    color: white;  
 }
 
 #aboutThree {
     grid-area: c;
     min-height: 30vh;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.5);
     color: white;
 }
 
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.5);
     color: white;
 }
 
@@ -205,19 +209,27 @@ a {
 #skillTree {
     display: flex;
     min-height: 80vh;
+    margin: 0 5vw 30px 5vw;
 }
 
-#branch {
+.branch {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: row-reverse;
 }
 
-#branch li {
+.leaf {
     width: 100px;
     height: 100px;
-    margin: 2vw;
+    margin: 30px 2vw;
     background: black;
-    color: white;
+}
+
+.leaf p {
+    color: black;
+    width: 120px;
+    position: relative;
+    top: 90px;
+    left: -10px;
+    font-weight: bold;
 }
