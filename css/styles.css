@@ -15,13 +15,13 @@ body {
 }
 
 h1 {
-    font-size: calc(12px + 8vh);
+    font-size: calc(8pt + 8vh);
     margin: 0px 2vw;
 }
 
 h2 {
-    font-size: calc(12px + 2vh);
-    margin: 0;
+    font-size: calc(8pt + 2vh);
+    margin: 0 1vw;
 }
 
 ul {
@@ -79,7 +79,7 @@ a {
     align-items: center;
 }
 
-/* Homepage Styles */
+/* Desktop Only Styles */
 @media only screen and (orientation: landscape) {
     #homeContainer {
         display: grid;
@@ -89,7 +89,25 @@ a {
             "a b c"
             "footer footer footer";
     }
+
+    #aboutContainer {
+        display: grid;
+        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-areas:
+            "landing landing landing landing"
+            "a a a a"
+            "x b c y"
+            "x d d y"
+            "x e e y"
+            "footer footer footer footer";
+    }
+
+    #aboutOne h1 {
+        align-self: flex-start;
+    }
 }
+
+/* Homepage Styles */
 #homeLanding {
     min-height: 100vh;
     background: white;
@@ -141,23 +159,6 @@ a {
 }
 
 /* About Styles */
-@media only screen and (orientation: landscape) {
-    #aboutContainer {
-        display: grid;
-        grid-template-columns: 1fr 4fr 4fr 1fr;
-        grid-template-areas:
-            "landing landing landing landing"
-            "a a a y"
-            "x b b y"
-            "x c d y"
-            "x e e y"
-            "footer footer footer footer";
-    }
-    #aboutOne h1 {
-        align-self: flex-start;
-    }
-}
-
 #aboutContainer {
     background-image: url('../img/aboutBgd.png');
     background-repeat: no-repeat;
@@ -173,7 +174,7 @@ a {
 
 #aboutOne {
     grid-area: a;
-    min-height: 35vh;
+    min-height: 65vh;
     background: rgba(255,255,255,0);
     color: white;
 }
@@ -181,8 +182,8 @@ a {
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
-    background: rgba(255,255,255,0);
-    color: white;  
+    background: rgba(0,0,0,0.5);
+    color: white;
 }
 
 #aboutThree {
@@ -195,14 +196,34 @@ a {
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.7);
+    justify-content: space-evenly;
+}
+
+#teams {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#teams div {
+    width: 20vw;
+    padding: 2vw;
+    margin: 1vw;
+    background: black;
     color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
 }
 
 #aboutFive {
     grid-area: e;
     min-height: 90vh;
-    background: white;
+    background: rgba(255,255,255,0.7);
 }
 
 #skillTree {
@@ -231,4 +252,11 @@ a {
     top: 90px;
     left: -10px;
     font-weight: bold;
+}
+
+@media only screen and (orientation: portrait) {
+    #teams div {
+        width: 100%;
+        margin: 0 4vw 4vw 4vw;
+    }
 }
