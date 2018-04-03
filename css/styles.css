@@ -122,14 +122,6 @@ a {
             "footer footer footer footer";
     }
 
-    #aboutTwo {
-        border-radius: 50px 0 0 0;
-    }
-
-    #aboutThree {
-        border-radius: 0 50px 0 0;
-    }
-
     #galleryLanding {
         display: grid;
         grid-template-columns: 1fr 9fr 1fr;
@@ -219,19 +211,19 @@ a {
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
-    background: rgba(0,0,0,0.5);
+    background: linear-gradient(transparent,rgba(255,255,255,0.2));
 }
 
 #aboutThree {
     grid-area: c;
     min-height: 30vh;
-    background: rgba(0,0,0,0.5);
+    background: linear-gradient(transparent,rgba(255,255,255,0.2));
 }
 
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.2));
+    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.4));
     justify-content: space-evenly;
 }
 
@@ -256,7 +248,7 @@ a {
 #aboutFive {
     grid-area: e;
     min-height: 90vh;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.4);
 }
 
 #skillTree {
@@ -297,6 +289,14 @@ a {
 
     #homeTitle {
         align-self: center;
+    }
+
+    #aboutTwo {
+        background: linear-gradient(transparent,rgba(255,255,255,0.1));
+    }
+
+    #aboutThree {
+        background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.2));
     }
 
     #teams div {
