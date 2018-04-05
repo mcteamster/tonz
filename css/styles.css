@@ -47,7 +47,7 @@ input {
     display: none;
 }
 
-input[type="checkbox"]:not(:checked) + .teamText {
+input[type="checkbox"]:not(:checked) + .hiddenText {
     height: 0;
     opacity: 0;
 }
@@ -79,6 +79,11 @@ input[type="checkbox"]:not(:checked) + .teamText {
 .content {
     display: flex;
     flex-direction: column;
+}
+
+.hiddenText {
+    transition: all 1s ease;
+    overflow: hidden;
 }
 
 .branch {
@@ -195,7 +200,7 @@ input[type="checkbox"]:not(:checked) + .teamText {
 /* About Styles */
 #aboutContainer {
     background-color: black;
-    background-image: url('../img/aboutBgd.png');
+    background-image: url('../img/aboutBgdBlur.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -203,7 +208,7 @@ input[type="checkbox"]:not(:checked) + .teamText {
 }
 
 #aboutLanding {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.5);
     color: white;
     min-height: 5vh;
 }
@@ -211,28 +216,43 @@ input[type="checkbox"]:not(:checked) + .teamText {
 #aboutOne {
     grid-area: a;
     min-height: 65vh;
-    background: linear-gradient(transparent,75%,rgba(0,0,0,0.2),rgba(0,0,0,0.4))
+    background: linear-gradient(transparent,75%,rgba(0,0,0,0.2),rgba(0,0,0,0.4));
+    justify-content: center;
 }
 
 #aboutOne h1 {
-    font-size: calc(16pt + 8vh);
-    margin: 8vw 4vw;
+    font-size: calc(6vw + 6vh);
+    margin: 4vh 4vw;
 }
 
 #aboutOne h2 {
-    margin: 4vw 12vw;
+    margin: 4vh 4vw;
 }
 
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
+    justify-content: center;
+}
+
+#aboutTwo div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #aboutThree {
     grid-area: c;
     min-height: 30vh;    
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
+    justify-content: center;
+}
+
+#aboutThree div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #aboutFour {
@@ -254,11 +274,22 @@ input[type="checkbox"]:not(:checked) + .teamText {
     width: 20vw;
     padding: 2vw;
     margin: 1vw;
-    background: black;
-    border-radius: 10px;
+    border-radius: 50px 5px 50px 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#teamOne {
+    background: rgb(73, 39, 39);
+}
+
+#teamTwo {
+    background: rgb(43, 43, 77);
+}
+
+#teamThree {
+    background: rgb(90, 82, 40);
 }
 
 #aboutFive {

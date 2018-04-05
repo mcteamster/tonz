@@ -16,61 +16,65 @@
         </div>
 
         <div class="content" id="aboutOne">
-            <h1> Catchphrase Goes Here </h1>
+            <h1> Title Goes Here </h1>
             <h2> I want to be the very best, that noone ever was. <br>
                 </h2>
         </div>
 
         <div class="content" id="aboutTwo">
-            <h1> Exp. </h1>
-            <ul>
-                <li> 
+            <label for="exp">
+                <div id="Exp.">
+                    <h1> Exp. </h1>
                     <h2> Hewlett Packard Enterprise </h2>
-                    <p> Engineer / Project Manager (2017-Present)</p>
-                </li>
-                <li> 
-                    <h2> KPMG </h2> 
-                    <p> Technological Risk and Assurance Intern (Summer&nbsp;2015/16) </p>
-                </li>
-            </ul>
+                    <input type="checkbox" id="exp">
+                    <span class="hiddenText">
+                        <p> Engineer / Project Manager (2017-Present)</p>
+                        <h2> KPMG </h2> 
+                        <p> Technological Risk and Assurance Intern (Summer&nbsp;2015/16) </p>
+                    </span>
+                </div>
+            </label>
         </div>
 
         <div class="content" id="aboutThree">
-            <h1> Class </h1>
-            <ul>
-                <li> 
+            <label for="edu">
+                <div id="class">
+                    <h1> Class </h1>
                     <h2> Bachelor of Engineering (Hons.) </h2>
-                    <p> Electronic and Mechatronic Systems </p>
-                    <p> Australian National University</p>
-                    <p> 2016 First Class Honours <br>
-                        <i> 'Design&nbsp;and Implementation&nbsp;of&nbsp;Power-<br>
-                        Efficient&nbsp;Solar&nbsp;Electric Vehicle&nbsp;Control' </i> 
-                    </p>
-                </li>
-            </ul>
+                    <input type="checkbox" id="edu">
+                    <span class="hiddenText"> 
+                        <p> Electronic and Mechatronic Systems </p>                            
+                        <p> Australian National University</p>
+                        <p> 2016 First Class Honours <br>
+                            <i> 'Design&nbsp;and Implementation&nbsp;of&nbsp;Power-<br>
+                            Efficient&nbsp;Solar&nbsp;Electric Vehicle&nbsp;Control' </i> 
+                        </p>               
+                    </span>
+                </div>
+            </label>
         </div>
 
         <div class="content" id="aboutFour">
             <h1> Teams </h1>
             <div id="teams">
                 <label for="t1"> 
-                    <div>
+                    <div id="teamOne">
                         <h2> Sol Invictus </h2>
-                        <input type="checkbox" name="one" id="t1">
-                        <span class="teamText" id="teamOne"> 
+                        <input type="checkbox" id="t1">
+                        <span class="hiddenText"> 
                             <p> Electro&shy;mechanical Team Leader (2016) </p> 
-                            <p> A member of the student research team, responsible for design of 
-                                the Solar Electric Vehicle's drive mechanism. The team successfully 
-                                competed in the 2017 Bridgestone World Solar Challenge </p>
+                            <p> Part of the student research design team for a Solar
+                                Electric Vehicle. The team successfully competed in 
+                                the 2017 Bridgestone World Solar Challenge </p>
                         </span>
                     </div>
                 </label>
 
                 <label for="t2">
-                    <div>
+                    <div id="teamTwo">
                         <h2> ANU eSports </h2>
-                        <input type="checkbox" name="two" id="t2">
-                        <span class="teamText" id="teamTwo">  
+                        <input type="checkbox" id="t2">
+                        <span class="hiddenText">  
                             <p> Club President (2015-2016) </p>
                             <p> Organised campus-wide gaming events in conjunction with external 
                             partners - including Red Bull, Riot Games, and Reload eSports </p>
@@ -79,10 +83,10 @@
                 </label>
                 
                 <label for="t3"> 
-                    <div>
+                    <div id="teamThree">
                         <h2> Swiggity Swag </h2>                  
-                        <input type="checkbox" name="three" id="t3">
-                        <span class="teamText" id="teamThree">
+                        <input type="checkbox" id="t3">
+                        <span class="hiddenText">
                             <p> Team Manager (2013-2016) </p>
                             <p> Managed a semi-professional League of Legends team from Canberra. 
                                 Runners-Up in the inaugural 2016 Reload 10k Arena 
@@ -94,7 +98,7 @@
         </div>
 
         <div class="content" id="aboutFive">
-            <h1> Skills </h1>
+            <h1 id="skills"> Skills </h1>
             <div id="skillTree">
                 <ul class="branch"> 
                     <li class="leaf"> <p> ITIL Project Management </p> </li>
@@ -114,7 +118,7 @@
                     <li class="leaf"> <p> Verilog HDL </p> </li>
                     <li class="leaf"> <p> Windows &amp; PowerShell </p> </li>
                     <li class="leaf"> <p> Linux </p> </li>
-                    <li class="leaf"> <p> VMware ESXi &amp; vSphere </p> </li>
+                    <li class="leaf"> <p> Hypervisors </p> </li>
                     <li class="leaf"> <p> MS Azure </p> </li>
                     <li class="leaf"> <p> AWS </p> </li>
                     <li class="leaf"> <p> Aruba Wireless </p> </li>
