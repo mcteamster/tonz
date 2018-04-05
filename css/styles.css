@@ -39,6 +39,19 @@ a {
     color: inherit;
 }
 
+label {
+    display: block;
+}
+
+input {
+    display: none;
+}
+
+input[type="checkbox"]:not(:checked) + .teamText {
+    height: 0;
+    opacity: 0;
+}
+
 /* Global Class Styles */
 .landing {
     grid-area: landing;
@@ -78,7 +91,8 @@ a {
     width: 100px;
     height: 100px;
     margin: 30px 2vw;
-    background: black;
+    background: white;
+    border-radius: 20px;
 }
 
 .leaf p {
@@ -180,6 +194,7 @@ a {
 
 /* About Styles */
 #aboutContainer {
+    background-color: black;
     background-image: url('../img/aboutBgd.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -188,7 +203,7 @@ a {
 }
 
 #aboutLanding {
-    background: black;
+    background: rgba(0,0,0,0.6);
     color: white;
     min-height: 5vh;
 }
@@ -196,7 +211,7 @@ a {
 #aboutOne {
     grid-area: a;
     min-height: 65vh;
-    background: rgba(255,255,255,0);
+    background: linear-gradient(transparent,75%,rgba(0,0,0,0.2),rgba(0,0,0,0.4))
 }
 
 #aboutOne h1 {
@@ -211,19 +226,19 @@ a {
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
-    background: linear-gradient(transparent,rgba(255,255,255,0.2));
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
 }
 
 #aboutThree {
     grid-area: c;
-    min-height: 30vh;
-    background: linear-gradient(transparent,rgba(255,255,255,0.2));
+    min-height: 30vh;    
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
 }
 
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.4));
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));
     justify-content: space-evenly;
 }
 
@@ -235,6 +250,7 @@ a {
 }
 
 #teams div {
+    min-height: 10vh;
     width: 20vw;
     padding: 2vw;
     margin: 1vw;
@@ -242,13 +258,13 @@ a {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #aboutFive {
     grid-area: e;
     min-height: 90vh;
-    background: rgba(255,255,255,0.4);
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,1));
 }
 
 #skillTree {
@@ -292,15 +308,15 @@ a {
     }
 
     #aboutTwo {
-        background: linear-gradient(transparent,rgba(255,255,255,0.1));
+        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5));
     }
 
     #aboutThree {
-        background: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.2));
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));
     }
 
     #teams div {
-        width: 100%;
+        width: 80vw;
         margin: 0 4vw 4vw 4vw;
     }
 
