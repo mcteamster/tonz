@@ -7,8 +7,8 @@ body {
     min-width: 480px;
     padding: 0;
     margin: 0;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background: black;
+    color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -118,6 +118,19 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
     align-items: center;
 }
 
+/* Animations */
+@keyframes textenter {
+    0% {color: black;}
+    100% {color: white;}
+}
+
+@keyframes textblink {
+    0% {color: white;}
+    50% {color: white;}
+    51% {color: black;}
+    100% {color: black;}
+}
+
 /* Desktop Only Styles */
 @media only screen and (orientation: landscape) and (min-width: 768px) {
     #homeContainer {
@@ -134,7 +147,7 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
         grid-template-columns: 1fr 4fr 4fr 1fr;
         grid-template-areas:
             "landing landing landing landing"
-            "x a a y"
+            "a a a a"
             "x b c y"
             "x d d y"
             "x e e y"
@@ -155,7 +168,20 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 /* Homepage Styles */
 #homeLanding {
     min-height: 100vh;
-    background: white;
+}
+
+#homeGraphic h1 {
+    margin: 10vh 0 0 10vw;
+    text-align: left;
+    font-size: calc(12vw + 24vh);
+}
+
+#terminal {
+    animation: textenter 2s;
+}
+
+#cursor {
+    animation: textenter 1.5s, textblink 1.5s 0.75s infinite;
 }
 
 #homeTitle {
@@ -167,8 +193,8 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
     grid-area: a;
     justify-content: space-around;
     min-height: 30vh;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 
 #homeOne:hover {
@@ -189,8 +215,8 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
     grid-area: c;
     justify-content: space-around;
     min-height: 30vh;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
 }
 
 #homeThree:hover {
@@ -199,24 +225,16 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 
 /* About Styles */
 #aboutContainer {
-    background-color: black;
-    background-image: url('../img/aboutBgdBlur.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
+    background: linear-gradient(120deg,steelblue,25%,midnightblue);
 }
 
 #aboutLanding {
-    background: rgba(0,0,0,0.5);
-    color: white;
     min-height: 5vh;
 }
 
 #aboutOne {
     grid-area: a;
     min-height: 65vh;
-    background: linear-gradient(transparent,75%,rgba(0,0,0,0.2),rgba(0,0,0,0.4));
     justify-content: center;
 }
 
@@ -232,7 +250,6 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 #aboutTwo {
     grid-area: b;
     min-height: 30vh;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
     justify-content: center;
 }
 
@@ -245,7 +262,6 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 #aboutThree {
     grid-area: c;
     min-height: 30vh;    
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6));
     justify-content: center;
 }
 
@@ -258,11 +274,11 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 #aboutFour {
     grid-area: d;
     min-height: 30vh;
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8));
     justify-content: space-evenly;
 }
 
 #teams {
+    margin: 1vh 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -281,21 +297,20 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 }
 
 #teamOne {
-    background: rgb(73, 39, 39);
+    background: darkred;
 }
 
 #teamTwo {
-    background: rgb(43, 43, 77);
+    background: royalblue;
 }
 
 #teamThree {
-    background: rgb(90, 82, 40);
+    background: goldenrod;
 }
 
 #aboutFive {
     grid-area: e;
     min-height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,1));
 }
 
 #skillTree {
@@ -307,7 +322,6 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 /* Gallery Styles */
 #galleryContainer {
     background: linear-gradient(rgb(0, 0, 40),rgb(0, 0, 80));
-    color: white;
 }
 
 #galleryLanding {
@@ -334,16 +348,13 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
         justify-content: space-around;
     }
 
+    #homeGraphic h1 {
+        margin: 10vh 0 0 0;
+        text-align: center;
+    }
+
     #homeTitle {
         align-self: center;
-    }
-
-    #aboutTwo {
-        background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5));
-    }
-
-    #aboutThree {
-        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6));
     }
 
     #teams div {
