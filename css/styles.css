@@ -173,7 +173,7 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 #homeGraphic h1 {
     margin: 10vh 0 0 10vw;
     text-align: left;
-    font-size: calc(12vw + 24vh);
+    font-size: calc(10vw + 20vh);
 }
 
 #terminal {
