@@ -161,7 +161,6 @@ input {
         grid-template-areas:
             "nav nav nav"
             "x a y"
-            "footer footer footer";
     }
 }
 
@@ -325,7 +324,7 @@ input {
 }
 
 #galleryLanding {
-    min-height: 95vh;
+    min-height: 100vh;
 }
 
 #galleryLanding .content {
