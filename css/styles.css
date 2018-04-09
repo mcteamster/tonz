@@ -47,11 +47,6 @@ input {
     display: none;
 }
 
-input[type="checkbox"]:not(:checked) + .hiddenText {
-    height: 0;
-    opacity: 0;
-}
-
 /* Global Class Styles */
 .landing {
     grid-area: landing;
@@ -133,6 +128,11 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 
 /* Desktop Only Styles */
 @media only screen and (orientation: landscape) and (min-width: 768px) {
+    input[type="checkbox"]:not(:checked) + .hiddenText {
+        height: 0;
+        opacity: 0;
+    }
+
     #homeContainer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -343,6 +343,11 @@ input[type="checkbox"]:not(:checked) + .hiddenText {
 
 /* Mobile Only Styles */
 @media only screen and (orientation: portrait) , only screen and (max-width: 768px) {
+    input[type="checkbox"]:not(:checked) + .team {
+        height: 0;
+        opacity: 0;
+    }
+
     .nav {
         width: 100%;
         justify-content: space-around;
