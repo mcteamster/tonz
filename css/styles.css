@@ -64,6 +64,7 @@ input {
 .nav a {
     padding: 1em 2em;
     font-weight: bold;
+    font-size: 16pt;
 }
 
 .title {
@@ -142,6 +143,16 @@ input {
             "footer footer footer";
     }
 
+    #homeLanding {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            "nav nav nav"
+            "x title y"
+            "graphic graphic graphic";
+    }
+
     #aboutContainer {
         display: grid;
         grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -169,10 +180,20 @@ input {
     min-height: 100vh;
 }
 
+#homeNav {
+    grid-area: nav;
+}
+
+#homeGraphic {
+    grid-area: graphic;
+    align-self: center;
+}
+
 #homeGraphic h1 {
-    margin: 10vh 0 0 10vw;
+    grid-area: graphic;
     text-align: left;
-    font-size: calc(10vw + 20vh);
+    font-size: calc(8vw + 16vh);
+    margin: 0 2vw 4vh;
 }
 
 #terminal {
@@ -184,8 +205,15 @@ input {
 }
 
 #homeTitle {
-    margin: 12vh 5vw;
-    align-self: flex-end;
+    grid-area: title;
+    align-content: center;
+    justify-content: center;
+    margin: 16vh 8vw 8vh;
+}
+
+#homeTitle h1 {
+    font-size: calc(6vw + 6vh);
+    margin: 0 0 4vh;
 }
 
 #homeOne {
@@ -243,7 +271,7 @@ input {
 }
 
 #aboutOne h2 {
-    margin: 4vh 4vw;
+    margin: 4vh 12vw;
 }
 
 #aboutTwo {
@@ -296,7 +324,7 @@ input {
 }
 
 #teamOne {
-    background: darkred;
+    background:cornflowerblue;
 }
 
 #teamTwo {
@@ -304,7 +332,7 @@ input {
 }
 
 #teamThree {
-    background: goldenrod;
+    background: slateblue;
 }
 
 #aboutFive {
@@ -355,10 +383,6 @@ input {
     #homeGraphic h1 {
         margin: 10vh 0 0 0;
         text-align: center;
-    }
-
-    #homeTitle {
-        align-self: center;
     }
 
     #teams div {
