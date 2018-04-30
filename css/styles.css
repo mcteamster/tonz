@@ -143,16 +143,6 @@ input {
             "footer footer footer";
     }
 
-    #homeLanding {
-        display: grid;
-        grid-template-rows: auto auto auto;
-        grid-template-columns: auto auto auto;
-        grid-template-areas:
-            "nav nav nav"
-            "x title y"
-            "graphic graphic graphic";
-    }
-
     #aboutContainer {
         display: grid;
         grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -178,6 +168,7 @@ input {
 /* Homepage Styles */
 #homeLanding {
     min-height: 100vh;
+    justify-content: space-between;
 }
 
 #homeNav {
@@ -193,7 +184,6 @@ input {
     grid-area: graphic;
     text-align: left;
     font-size: calc(8vw + 16vh);
-    margin: 0 2vw 4vh;
 }
 
 #terminal {
