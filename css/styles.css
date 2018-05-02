@@ -249,7 +249,7 @@ input {
 
 /* Gallery Styles */
 #galleryContainer {
-    background: linear-gradient(90deg,navy,67%,midnightblue,67%,midnightblue);
+    background: midnightblue;
 }
 
 #galleryLanding {
@@ -258,6 +258,7 @@ input {
 
 #galleryLanding .content {
     border: solid 1pt white;
+    justify-content: center;
 }
 
 #galleryOne {
@@ -266,6 +267,7 @@ input {
 
 #galleryTwo {
     grid-area: b;
+    display: none;
 }   
 
 /* Mobile Only Styles */
