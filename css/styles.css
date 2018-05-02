@@ -14,12 +14,12 @@ body {
 }
 
 h1 {
-    font-size: calc(8pt + 8vh);
+    font-size: 72pt;
     margin: 0px 2vw;
 }
 
 h2 {
-    font-size: calc(8pt + 2vh);
+    font-size: 24pt;
     margin: 0 1vw;
 }
 
@@ -92,7 +92,7 @@ input {
 .leaf {
     width: 100px;
     height: 100px;
-    margin: 30px 2vw;
+    margin: 50px 30px;
     background: white;
     border-radius: 20px;
 }
@@ -135,15 +135,6 @@ input {
         opacity: 0;
     }
 
-    #homeContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "landing landing landing"
-            "a b c"
-            "footer footer footer";
-    }
-
     #aboutContainer {
         display: grid;
         grid-template-columns: 1fr 6fr 3fr 1fr;
@@ -156,6 +147,14 @@ input {
             "footer footer footer footer";
     }
 
+    #aboutTwo div {
+        cursor: pointer;
+    }
+
+    #aboutThree div {
+        cursor: pointer;
+    }
+
     #galleryLanding {
         display: grid;
         grid-template-columns: 1fr 9fr 1fr;
@@ -164,81 +163,6 @@ input {
             "nav nav nav"
             "x a y"
     }
-}
-
-/* Homepage Styles */
-#homeLanding {
-    min-height: 105vh;
-    justify-content: space-between;
-}
-
-#homeNav {
-    grid-area: nav;
-}
-
-#homeGraphic {
-    grid-area: graphic;
-    align-self: center;
-}
-
-#homeGraphic h1 {
-    grid-area: graphic;
-    text-align: left;
-    font-size: calc(8vw + 16vh);
-}
-
-#terminal {
-    animation: textenter 2s;
-}
-
-#cursor {
-    animation: textenter 1.5s, textblink 1.5s 0.75s infinite;
-}
-
-#homeTitle {
-    grid-area: title;
-    align-content: center;
-    justify-content: center;
-    margin: 16vh 8vw 8vh;
-}
-
-#homeTitle h1 {
-    font-size: calc(6vw + 6vh);
-    margin: 0 0 4vh;
-}
-
-#homeOne {
-    grid-area: a;
-    justify-content: space-around;
-    min-height: 30vh;
-    background: white;
-    color: black;
-}
-
-#homeOne:hover {
-    background: darkred;
-}
-
-#homeTwo {
-    grid-area: b;    
-    justify-content: space-around;
-    min-height: 30vh;
-}
-
-#homeTwo:hover {
-    background: darkred;
-}
-
-#homeThree {
-    grid-area: c;
-    justify-content: space-around;
-    min-height: 30vh;
-    background: white;
-    color: black;
-}
-
-#homeThree:hover {
-    background: darkred;
 }
 
 /* About Styles */
@@ -266,6 +190,7 @@ input {
 
 #aboutTwo {
     grid-area: b;
+    margin: 0 20px;
     min-height: 35vh;
     justify-content: center;
 }
@@ -278,7 +203,8 @@ input {
 
 #aboutThree {
     grid-area: c;
-    min-height: 35vh;    
+    margin: 0 20px;
+    min-height: 35vh;
     justify-content: center;
 }
 
@@ -290,8 +216,7 @@ input {
 
 #aboutFour {
     grid-area: d;
-    min-height: 30vh;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 #teams {
@@ -303,11 +228,9 @@ input {
 }
 
 #teams div {
-    background: blue;
     width: 20vw;
     padding: 2vw;
     margin: 1vw;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
