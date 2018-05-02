@@ -145,13 +145,13 @@ input {
 
     #aboutContainer {
         display: grid;
-        grid-template-columns: 1fr 4fr 4fr 1fr;
+        grid-template-columns: 1fr 6fr 3fr 1fr;
         grid-template-areas:
             "landing landing landing landing"
-            "a a a a"
-            "x b c y"
-            "x d d y"
-            "x e e y"
+            "a a b x"
+            "a a c x"
+            "y d d x"
+            "e e e e"
             "footer footer footer footer";
     }
 
@@ -167,7 +167,7 @@ input {
 
 /* Homepage Styles */
 #homeLanding {
-    min-height: 100vh;
+    min-height: 105vh;
     justify-content: space-between;
 }
 
@@ -251,22 +251,21 @@ input {
 
 #aboutOne {
     grid-area: a;
-    min-height: 65vh;
+    min-height: 95vh;
     justify-content: center;
 }
 
 #aboutOne h1 {
-    font-size: calc(6vw + 6vh);
-    margin: 4vh 4vw;
+    font-size: 8em;
 }
 
 #aboutOne h2 {
-    margin: 4vh 12vw;
+    margin: 4vh 8vw;
 }
 
 #aboutTwo {
     grid-area: b;
-    min-height: 30vh;
+    min-height: 35vh;
     justify-content: center;
 }
 
@@ -278,7 +277,7 @@ input {
 
 #aboutThree {
     grid-area: c;
-    min-height: 30vh;    
+    min-height: 35vh;    
     justify-content: center;
 }
 
@@ -303,26 +302,25 @@ input {
 }
 
 #teams div {
-    min-height: 10vh;
     width: 20vw;
     padding: 2vw;
     margin: 1vw;
-    border-radius: 50px 5px 50px 5px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #teamOne {
-    background:cornflowerblue;
+    background:darkblue;
 }
 
 #teamTwo {
-    background: royalblue;
+    background: darkblue;
 }
 
 #teamThree {
-    background: slateblue;
+    background: darkblue;
 }
 
 #aboutFive {
@@ -360,14 +358,14 @@ input {
 
 /* Mobile Only Styles */
 @media only screen and (orientation: portrait) , only screen and (max-width: 768px) {
-    input[type="checkbox"]:not(:checked) + .team {
-        height: 0;
-        opacity: 0;
-    }
-
     .nav {
         width: 100%;
         justify-content: space-around;
+    }
+
+    .nav a {
+        padding: 1em 0em;
+        font-size: 24pt;
     }
 
     #homeGraphic h1 {
