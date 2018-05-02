@@ -86,6 +86,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .leaf {
@@ -302,6 +303,7 @@ input {
 }
 
 #teams div {
+    background: blue;
     width: 20vw;
     padding: 2vw;
     margin: 1vw;
@@ -309,18 +311,6 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#teamOne {
-    background:darkblue;
-}
-
-#teamTwo {
-    background: darkblue;
-}
-
-#teamThree {
-    background: darkblue;
 }
 
 #aboutFive {
