@@ -157,11 +157,11 @@ input {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 480px 1fr;
         grid-template-rows: auto 1fr;
         grid-template-areas:
-            "nav nav nav"
-            "x a b"
+            "nav nav"
+            "a b"
     }
 }
 
@@ -238,7 +238,7 @@ input {
 
 #aboutFive {
     grid-area: e;
-    min-height: 90vh;
+    min-height: 93vh;
 }
 
 #skillTree {
@@ -259,6 +259,7 @@ input {
 #galleryLanding .content {
     border: solid 1pt white;
     justify-content: center;
+    min-height: 50vh;
 }
 
 #galleryOne {
@@ -267,7 +268,6 @@ input {
 
 #galleryTwo {
     grid-area: b;
-    display: none;
 }   
 
 /* Mobile Only Styles */
@@ -279,12 +279,11 @@ input {
 
     .nav a {
         padding: 1em 0em;
-        font-size: 24pt;
+        font-size: 5vw;
     }
 
-    #homeGraphic h1 {
-        margin: 10vh 0 0 0;
-        text-align: center;
+    #aboutOne h1 {
+        font-size: 20vw;
     }
 
     #teams div {
