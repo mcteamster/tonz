@@ -40,7 +40,7 @@ a {
 }
 
 label {
-    display: block;
+    display: grid;
 }
 
 input {
@@ -52,7 +52,7 @@ input {
     grid-area: landing;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .nav {
@@ -106,25 +106,21 @@ input {
 }
 
 .tile {
-    width: 32vw;
-    height: 18vw;
-    min-width: 480px;
-    min-height: 270px;
-    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: black;
-    color: gray;
-    border-radius: 20px;
+    color: transparent;
 }
 
 .tile:hover {
     color: white;
+    text-shadow: 5px 5px black;
 }
 
-.tile:onclic {
-    color:white;
+.information {
+    background: rgba(0,0,0,0.5);
+    color: white;
 }
 
 .footer {
@@ -179,11 +175,13 @@ input {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
         grid-template-areas:
-            "nav"
-            "a"
+            "nav nav nav"
+            "a c e"
+            "b d f"
+            "b d f"
     }
 }
 
@@ -278,12 +276,34 @@ input {
     min-height: 100vh;
 }
 
-#galleryOne {
+#t1 {
     grid-area: a;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
+}
+
+#t1 div {
+    background-image: url("../img/wd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#t2 {
+    grid-area: b;
+}
+
+#t3 {
+    grid-area: c;
+}
+
+#t4 {
+    grid-area: d;
+}
+
+#t5 {
+    grid-area: e;
+}
+
+#t6 {
+    grid-area: f;
 }
 
 /* Mobile Only Styles */
@@ -298,6 +318,12 @@ input {
         font-size: 5vw;
     }
 
+    .tile {
+        width: 100%;
+        min-height: 56vw;
+        color: white;
+    }
+
     #aboutOne h1 {
         font-size: 20vw;
     }
@@ -305,9 +331,5 @@ input {
     #teams div {
         width: 80vw;
         margin: 0 4vw 4vw 4vw;
-    }
-
-    #galleryLanding .content {
-        margin: 4vw;
     }
 }
