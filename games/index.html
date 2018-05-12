@@ -13,35 +13,44 @@
                 <a> Contact </a>
             </div>
 
-            <label for="WD" id="t1">
-                <div class="tile">
-                    <h1> Wave Defence </h1>
-                </div>
-            </label>
-            <input type="checkbox" id="WD">
-            <div class="hiddenText tile information" id="t2"> 
-                <p> Wave Defence Information </p>                                         
+            <div class="tile information" id="t0"> 
+                <h1> Games </h1>
+                <h2> For Microsoft Office </h2>
+                <p> Ever since I got my first laptop in 2003 I've experimented with creating
+                    interactive content in PowerPoint.  </p>                                      
             </div>
 
-            <label for="MS" id="t3">
-                <div class="tile">
-                    <h1> Mine-Sweeper </h1>
-                </div>
-            </label>
-            <input type="checkbox" id="MS">
-            <div class="hiddenText tile information" id="t4"> 
-                <p> Minesweeper Information </p>                                         
+            <div class="tile picture" id="t1" onclick="showHide(1)"></div>
+
+            <div class="tile information" id="t2">
+                <h2> Wave Defence </h2> 
+                <p> Wave Defence Information </p>
+                <h3 class="back" onclick="showHide(-1)"> < Hide </h3>                                
             </div>
 
-            <label for="2048" id="t5">
-                <div class="tile">
-                    <h1> 2048 </h1>
-                </div>
-            </label>
-            <input type="checkbox" id="2048">
-            <div class="hiddenText tile information" id="t6"> 
-                <p> 2048 Information </p>                                         
+            <div class="tile picture" id="t3" onclick="showHide(3)"></div>
+
+            <div class="tile information" id="t4"> 
+                <h2> Mine&shy;sweeper </h2>
+                <p> Minesweeper Information </p>
+                
+                <h3 class="back" onclick="showHide(-1)"> < Hide </h3>                                          
+            </div>
+
+            <div class="tile picture" id="t5" onclick="showHide(5)"></div>
+
+            <div class="tile information" id="t6"> 
+                <h2> 2048 </h2>
+                <p> 2048 Information </p>
+                
+                <h3 class="back" onclick="showHide(-1)"> < Hide </h3>                                          
+            </div>
+
+            <div class="footer"> 
+                <h3> &copy; Tony Zhang 2018 </h3>
             </div>
         </div>
     </div>
+
+    <script src="../js/scripts.js"></script>
 </body>

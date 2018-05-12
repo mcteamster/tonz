@@ -110,17 +110,25 @@ input {
     justify-content: center;
     align-items: center;
     background: black;
-    color: transparent;
+    color: white;
 }
 
-.tile:hover {
-    color: white;
-    text-shadow: 5px 5px black;
+.picture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .information {
-    background: rgba(0,0,0,0.5);
+    background: black;
     color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.back {
+    cursor: pointer;
 }
 
 .footer {
@@ -175,13 +183,14 @@ input {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
+        grid-template-columns: 20px 40vw 1fr 1fr 20px;
+        grid-template-rows: auto 2fr 1fr 20px auto;
         grid-template-areas:
-            "nav nav nav"
-            "a c e"
-            "b d f"
-            "b d f"
+            "nav nav nav nav nav"
+            "x info a a y"
+            "x info b c y"
+            "z z z z z"
+            "footer footer footer footer footer"
     }
 }
 
@@ -276,34 +285,36 @@ input {
     min-height: 100vh;
 }
 
-#t1 {
-    grid-area: a;
+#t0 {
+    grid-area: info;
+    display: flex;
 }
 
-#t1 div {
+#t1 {
+    grid-area: a;
     background-image: url("../img/wd.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #t2 {
-    grid-area: b;
+    grid-area: info;
 }
 
 #t3 {
-    grid-area: c;
+    grid-area: b;
+    background-image: url("../img/ms.png");
 }
 
 #t4 {
-    grid-area: d;
+    grid-area: info;
 }
 
 #t5 {
-    grid-area: e;
+    grid-area: c;
+    background-image: url("../img/2048.png");
 }
 
 #t6 {
-    grid-area: f;
+    grid-area: info;
 }
 
 /* Mobile Only Styles */
@@ -322,6 +333,11 @@ input {
         width: 100%;
         min-height: 56vw;
         color: white;
+        margin: 20px 0 0 0;
+    }
+    
+    .information {
+        margin: 0;
     }
 
     #aboutOne h1 {
