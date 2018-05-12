@@ -117,6 +117,7 @@ input {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .information {
@@ -125,6 +126,11 @@ input {
     display: none;
     flex-direction: column;
     justify-content: center;
+    background: linear-gradient(30deg,midnightblue,60%,slateblue);
+}
+
+.information p {
+    margin: 0 50px;
 }
 
 .back {
@@ -338,6 +344,7 @@ input {
     
     .information {
         margin: 0;
+        background: transparent;
     }
 
     #aboutOne h1 {
