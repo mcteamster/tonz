@@ -109,6 +109,7 @@ input {
     top: 90px;
     left: -10px;
     font-weight: bold;
+    font-size: 12pt;
 }
 
 .tile {
@@ -135,8 +136,12 @@ input {
     background: linear-gradient(30deg,midnightblue,60%,slateblue);
 }
 
-.information p {
-    margin: 0 50px;
+.tile h2 {
+    font-size: 4em;
+}
+
+.information p, h4 {
+    margin: 0 20px;
 }
 
 .back {
