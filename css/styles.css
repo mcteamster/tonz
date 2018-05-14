@@ -207,6 +207,14 @@ input {
             "z z z z z"
             "footer footer footer footer footer"
     }
+
+    #contactContainer {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "landing landing landing"
+            "a a a"
+    }
 }
 
 /* About Styles */
@@ -332,6 +340,12 @@ input {
 
 #t6 {
     grid-area: info;
+}
+
+/* Contact Styles */
+#contactContainer {
+    background: linear-gradient(45deg,darkslateblue,60%,cornflowerblue);
+    height: 95vh;
 }
 
 /* Mobile Only Styles */
