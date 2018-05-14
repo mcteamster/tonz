@@ -4,8 +4,6 @@
 body {
     width: 100%;
     height: 100%;
-    font-size-adjust: 100%;
-    text-size-adjust: 100%;
     min-width: 480px;
     padding: 0;
     margin: 0;
@@ -96,20 +94,20 @@ input {
 }
 
 .leaf {
-    width: 100px;
-    height: 100px;
-    margin: 50px 30px;
+    width: calc(80px + 2vw);
+    height: calc(80px + 2vw);
+    margin: calc(30px + 1vh) calc(10px + 1vw);
     background: white;
-    border-radius: 20px;
+    border-radius: calc(40px + 1vw);
 }
 
 .leaf p {
-    width: 120px;
+    width: calc(120px + 2vw);
     position: relative;
-    top: 90px;
-    left: -10px;
+    top: calc(70px + 2vw);
+    left: -20px;
     font-weight: bold;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .tile {
@@ -224,6 +222,7 @@ input {
     grid-area: a;
     min-height: 95vh;
     justify-content: center;
+    
 }
 
 #aboutOne h1 {
@@ -337,6 +336,14 @@ input {
 
 /* Mobile Only Styles */
 @media only screen and (orientation: portrait) , only screen and (max-width: 768px) {
+    h2 {
+        font-size: 6vw;
+    }
+    
+    p {
+        font-size: 4vw;
+    }
+    
     .nav {
         width: 100%;
         justify-content: space-around;
