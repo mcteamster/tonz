@@ -344,7 +344,7 @@ input {
 
 /* Contact Styles */
 #contactContainer {
-    background: linear-gradient(45deg,darkslateblue,60%,cornflowerblue);
+    background: linear-gradient(90deg,darkslateblue,60%,cornflowerblue);
     height: 95vh;
 }
 
