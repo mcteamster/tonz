@@ -140,8 +140,21 @@ input {
 
 .download {
     display: flex;
-    align-items: space-evenly;
-    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.download p {
+    min-height: 2em;
+    min-width: 8em;
+    border-radius: 1em;
+    border: 1pt white solid;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download p:hover {
     background: black;
 }
 
@@ -217,10 +230,14 @@ input {
 
     #contactContainer {
         display: grid;
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 5vh 5vh 40vh 40vh 5vh;
         grid-template-areas:
             "landing landing landing"
-            "a a a"
+            "x x x"
+            "y a z"
+            "y b z"
+            "y c z"
     }
 }
 
@@ -237,7 +254,6 @@ input {
     grid-area: a;
     min-height: 95vh;
     justify-content: center;
-    
 }
 
 #aboutOne h1 {
@@ -355,6 +371,20 @@ input {
     height: 95vh;
 }
 
+#contactOne {
+    grid-area: a;
+    min-width: 600px;
+    width: 50vw;
+    border: 1pt white solid;
+}
+
+#contactTwo {
+    grid-area: b;
+    min-width: 600px;
+    width: 50vw;
+    border: 1pt white solid;
+}
+
 /* Mobile Only Styles */
 @media only screen and (orientation: portrait) , only screen and (max-width: 768px) {
     h2 {
@@ -388,6 +418,10 @@ input {
 
     .information p, h4 {
         margin: 0 10vw;
+    }
+
+    .download p {
+        margin: 0 4vw;
     }
 
     #aboutOne h1 {
