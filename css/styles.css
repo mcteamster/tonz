@@ -416,6 +416,10 @@ input {
         background: transparent;
     }
 
+    .information h2 {
+        display: none;
+    }
+
     .information p, h4 {
         margin: 0 10vw;
     }
@@ -431,5 +435,10 @@ input {
     #teams div {
         width: 80vw;
         margin: 0 4vw 4vw 4vw;
+    }
+
+    #t0 h2 {
+        display: inherit;
+        font-size: 12vw;
     }
 }

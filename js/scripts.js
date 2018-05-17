@@ -10,5 +10,16 @@ function showHide(n) {
 
     document.getElementById("t"+(n+1)).style.display = "flex";
     document.getElementById("t0").style.display = "flex";
-    location.href = "#t"+(n+1);
-}   
+    location.href = "#t"+(n);
+}
+
+function hide() {
+    var infos = document.getElementsByClassName("information");
+
+    for(var i = 0; i < infos.length; i++){
+        infos[i].style.display = "none";
+    }
+
+    document.getElementById("t0").style.display = "flex";
+    location.href = "#t1";
+}
