@@ -94,17 +94,17 @@ input {
 }
 
 .leaf {
-    width: calc(80px + 2vw);
-    height: calc(80px + 2vw);
-    margin: calc(30px + 1vh) calc(10px + 1vw);
+    width: calc(80px + 3vh);
+    height: calc(80px + 3vh);
+    margin: calc(30px + 1.5vh) calc(10px + 2vw);
     background: white;
-    border-radius: calc(40px + 1vw);
+    border-radius: calc(40px + 1.5vh);
 }
 
 .leaf p {
-    width: calc(120px + 2vw);
+    width: calc(120px + 3vh);
     position: relative;
-    top: calc(70px + 2vw);
+    top: calc(70px + 3vh);
     left: -20px;
     font-weight: bold;
     font-size: 14pt;
@@ -120,7 +120,7 @@ input {
 
 .picture {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain, cover;
     background-position: center;
     cursor: pointer;
 }
@@ -218,14 +218,14 @@ input {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 20px 40vw 1fr 1fr 20px;
+        grid-template-columns: 40vw 1fr 1fr;
         grid-template-rows: auto 2fr 1fr 20px auto;
         grid-template-areas:
-            "nav nav nav nav nav"
-            "x info a a y"
-            "x info b c y"
-            "z z z z z"
-            "footer footer footer footer footer"
+            "nav nav nav"
+            "info a a"
+            "info b c"
+            "z z z"
+            "footer footer footer"
     }
 
     #contactContainer {
