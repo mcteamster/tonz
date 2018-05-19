@@ -99,6 +99,9 @@ input {
     margin: calc(30px + 1.5vh) calc(10px + 2vw);
     background: white;
     border-radius: calc(40px + 1.5vh);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .leaf p {
@@ -147,7 +150,7 @@ input {
     min-height: 2em;
     min-width: 8em;
     border-radius: 1em;
-    border: 1pt white solid;
+    border: 2pt white solid;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -160,6 +163,7 @@ input {
 
 .back {
     cursor: pointer;
+    font-size: 3vh;
 }
 
 .footer {
@@ -338,6 +342,13 @@ input {
     display: flex;
 }
 
+#t0 img {
+    min-width: 200px;
+    min-height: 200px;
+    width: 10vw;
+    height: 10vw;
+}
+
 #t1 {
     grid-area: a;
     background-image: url("../img/wd.png");
@@ -373,14 +384,12 @@ input {
 
 #contactOne {
     grid-area: a;
-    min-width: 600px;
     width: 50vw;
     border: 1pt white solid;
 }
 
 #contactTwo {
     grid-area: b;
-    min-width: 600px;
     width: 50vw;
     border: 1pt white solid;
 }
@@ -435,10 +444,5 @@ input {
     #teams div {
         width: 80vw;
         margin: 0 4vw 4vw 4vw;
-    }
-
-    #t0 h2 {
-        display: inherit;
-        font-size: 12vw;
     }
 }
