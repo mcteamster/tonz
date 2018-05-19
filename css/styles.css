@@ -51,6 +51,13 @@ input {
     display: none;
 }
 
+img {
+    min-width: 200px;
+    min-height: 200px;
+    width: 10vw;
+    height: 10vw;
+}
+
 /* Global Class Styles */
 .landing {
     grid-area: landing;
@@ -97,11 +104,16 @@ input {
     width: calc(80px + 3vh);
     height: calc(80px + 3vh);
     margin: calc(30px + 1.5vh) calc(10px + 2vw);
-    background: white;
+    background: transparent;
     border-radius: calc(40px + 1.5vh);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.leaf:hover {
+    position: relative;
+    top: -5pt;
 }
 
 .leaf p {
@@ -342,16 +354,9 @@ input {
     display: flex;
 }
 
-#t0 img {
-    min-width: 200px;
-    min-height: 200px;
-    width: 10vw;
-    height: 10vw;
-}
-
 #t1 {
     grid-area: a;
-    background-image: url("../img/wd.png");
+    background-image: url("../img/games/wd.png");
 }
 
 #t2 {
@@ -360,7 +365,7 @@ input {
 
 #t3 {
     grid-area: b;
-    background-image: url("../img/ms.png");
+    background-image: url("../img/games/ms.png");
 }
 
 #t4 {
@@ -369,7 +374,7 @@ input {
 
 #t5 {
     grid-area: c;
-    background-image: url("../img/2048.png");
+    background-image: url("../img/games/2048.png");
 }
 
 #t6 {
@@ -383,14 +388,20 @@ input {
 }
 
 #contactOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: a;
-    width: 50vw;
+    min-width: 600px;
     border: 1pt white solid;
 }
 
 #contactTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: b;
-    width: 50vw;
+    min-width: 600px;
     border: 1pt white solid;
 }
 
