@@ -105,7 +105,6 @@ img {
     height: calc(80px + 3vh);
     margin: calc(30px + 1.5vh) calc(10px + 2vw);
     background: transparent;
-    border-radius: calc(40px + 1.5vh);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
