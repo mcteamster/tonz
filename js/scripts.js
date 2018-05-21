@@ -20,5 +20,4 @@ function hide() {
     }
 
     document.getElementById("t0").style.display = "flex";
-    location.href = "#t1";
 }

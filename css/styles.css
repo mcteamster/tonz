@@ -28,6 +28,10 @@ h3 {
     margin: 0;
 }
 
+h4 {
+    font-size: 12pt;
+}
+
 p {
     font-size: 16pt;
 }
@@ -192,6 +196,7 @@ img {
 .back {
     cursor: pointer;
     font-size: 3vh;
+    text-decoration: underline;
 }
 
 .footer {
@@ -352,7 +357,7 @@ img {
 }
 
 /* Mobile Only Styles*/
-@media only screen and (max-width: 600pt) {
+@media only screen and (max-aspect-ratio: 69/100) {
     h2 {
         font-size: 6vw;
     }
@@ -420,7 +425,7 @@ img {
 }
 
 /* Tablet Only Styles*/
-@media only screen and (min-width: 600pt) and (max-width: 1200pt) , only screen and (orientation: portrait) and (min-width: 1200pt) {
+@media only screen and (min-aspect-ratio: 69/100) and (max-aspect-ratio: 4/3) {        
     .information p, h4 {
         margin: 0 20px;
     }
@@ -453,14 +458,13 @@ img {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 50vw 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 20px auto;
+        grid-template-columns: 60vw 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
         grid-template-areas:
             "nav nav"
             "info a"
             "info b"
             "info c"
-            "z z"
             "footer footer"
     }
 
@@ -478,7 +482,7 @@ img {
 }
 
 /* Desktop Only Styles */
-@media only screen and (orientation: landscape) and (min-width: 1200pt) {
+@media only screen and (min-aspect-ratio: 4/3) {
     input[type="checkbox"]:not(:checked) + .hiddenText {
         height: 0;
         opacity: 0;
