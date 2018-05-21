@@ -10,7 +10,6 @@ function showHide(n) {
 
     document.getElementById("t"+(n+1)).style.display = "flex";
     document.getElementById("t0").style.display = "flex";
-    location.href = "#t"+(n);
 }
 
 function hide() {
