@@ -352,7 +352,7 @@ img {
 }
 
 /* Mobile Only Styles*/
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 600pt) {
     h2 {
         font-size: 6vw;
     }
@@ -420,7 +420,7 @@ img {
 }
 
 /* Tablet Only Styles*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1440px) , only screen and (orientation: portrait) and (min-device-width: 1440px) {
+@media only screen and (min-width: 600pt) and (max-width: 1200pt) , only screen and (orientation: portrait) and (min-width: 1200pt) {
     .information p, h4 {
         margin: 0 20px;
     }
@@ -478,7 +478,7 @@ img {
 }
 
 /* Desktop Only Styles */
-@media only screen and (orientation: landscape) and (min-device-width: 1440px) {
+@media only screen and (orientation: landscape) and (min-width: 1200pt) {
     input[type="checkbox"]:not(:checked) + .hiddenText {
         height: 0;
         opacity: 0;
