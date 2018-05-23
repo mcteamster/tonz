@@ -56,6 +56,8 @@ input {
 }
 
 img {
+    display: block;
+    margin: 0 auto 0 auto;
     min-width: 200px;
     min-height: 200px;
     width: 10vw;
@@ -369,6 +371,11 @@ img {
     
     p {
         font-size: 4vw;
+    }
+    
+    img {
+        height: 40vw;
+        width: 40vw;
     }
     
     .nav {
