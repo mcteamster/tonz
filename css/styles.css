@@ -365,6 +365,7 @@ img {
 #contactContent .content {
     display: flex;
     flex-direction: row;
+    text-align: left;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
