@@ -182,12 +182,15 @@ img {
 
 .download {
     display: flex;
-    cursor: pointer;
 }
 
 .download img:hover {
     position: relative;
     top: -2pt;
+}
+
+.nodownload {
+    display: none;
 }
 
 .back {
@@ -451,8 +454,12 @@ img {
         margin: 0 10vw;
     }
 
-    .download p {
-        margin: 0 4vw;
+    .download {
+        display: none;
+    }
+
+    .nodownload {
+        display: flex;
     }
 
     #aboutOne h1 {
