@@ -185,19 +185,9 @@ img {
     cursor: pointer;
 }
 
-.download p {
-    min-height: 2em;
-    min-width: 8em;
-    border-radius: 1em;
-    border: 2pt white solid;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.download p:hover {
-    background: black;
+.download img:hover {
+    position: relative;
+    top: -2pt;
 }
 
 .back {
@@ -480,6 +470,10 @@ img {
     .information p, h4 {
         margin: 0 20px;
     }
+    
+    .back {
+        display: none;
+    }
 
     #aboutContainer {
         display: grid;
@@ -541,6 +535,10 @@ img {
 
     .information p, h4 {
         margin: 0 20px;
+    }
+
+    .back {
+        display: none;
     }
 
     #aboutContainer {
