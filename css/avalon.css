@@ -1,0 +1,116 @@
+/* CSS for Avalon Web Board */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    min-width: 480px;
+    padding: 0;
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(60deg,#000,#333);
+}
+
+#board {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cardbox {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pass {
+    background: darkblue;
+}
+
+#fail {
+    background: darkred;
+}
+
+#shade {
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.mission {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    border: 3pt solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6pt 3pt white;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.card {
+    width: calc(100vw - 4vh);
+    height: 96vh;
+    max-width: calc((900vh/16) - 4vh);
+    max-height: calc((1600vw/9) - 4vw);
+    border-radius: 50px;
+    border: 10pt solid white;
+    background: linear-gradient(120deg,#111,#222);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.button {
+    width: 24%;
+    height: 13.5%;
+    margin: 10%;
+    border: 10pt solid white;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+    #board {
+        flex-direction: column;
+    }
+
+    .mission {
+        width: 12vh;
+        height: 12vh;
+        font-size: 5vh;
+        transform: rotate(90deg);
+    }
+}

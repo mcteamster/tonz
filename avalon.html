@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<head>
+    <title> Tonz | Avalon </title>
+    <link rel="stylesheet" type="text/css" href="css/avalon.css">
+</head>
+
+<body>
+    <div id="background" onclick="init(3)">
+        <div id="board">
+            <div class="mission" id="m1" onclick="start(1)">
+                A
+            </div>
+            <div class="mission" id="m2" onclick="start(2)">
+                B
+            </div>
+            <div class="mission" id="m3" onclick="start(3)">
+                C
+            </div>
+            <div class="mission" id="m4" onclick="start(4)">
+                D
+            </div>
+            <div class="mission" id="m5" onclick="start(5)">
+                E
+            </div>
+        </div>
+
+        <div id="cardbox" class="hidden">
+            <div class="card">
+                <div class="button" id="fail" onclick="fail()">
+                    F
+                </div>
+                <div class="button" id="pass" onclick="pass()">
+                    P
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="shade" class="hidden" onclick="hide()">
+        <h1> Tap to Continue </h1>
+    </div>
+
+    <script src="js/avalon.js"></script>
+</body>
