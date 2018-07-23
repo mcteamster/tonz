@@ -5,8 +5,29 @@
 </head>
 
 <body>
-    <div id="background" onclick="init(3)">
-        <div id="board">
+    <div id="background" onclick="void(0)">
+        <div id="main">
+            <div class="players" id="p5" onclick="init(1)">
+                5 Players
+            </div>
+            <div class="players" id="p6" onclick="init(2)">
+                6 Players
+            </div>
+            <div class="players" id="p7" onclick="init(3)">
+                7 Players
+            </div>
+            <div class="players" id="p8" onclick="init(4)">
+                8 Players
+            </div>
+            <div class="players" id="p9" onclick="init(4)">
+                9 Players
+            </div>
+            <div class="players" id="p10" onclick="init(4)">
+                10 Players
+            </div>
+        </div>
+
+        <div id="board" class="hidden">
             <div class="mission" id="m1" onclick="start(1)">
                 A
             </div>
@@ -26,18 +47,17 @@
 
         <div id="cardbox" class="hidden">
             <div class="card">
-                <div class="button" id="fail" onclick="fail()">
-                    F
+                <div class="button" id="fail" onclick="vote(1)">
+                    <h1> F </h1>
                 </div>
-                <div class="button" id="pass" onclick="pass()">
-                    P
+                <div class="button" id="pass" onclick="vote(0)">
+                    <h1> P </h1>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="shade" class="hidden" onclick="hide()">
-        <h1> Tap to Continue </h1>
     </div>
 
     <script src="js/avalon.js"></script>

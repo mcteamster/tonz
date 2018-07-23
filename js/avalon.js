@@ -10,10 +10,14 @@ var mission = 0;
 // Objects
 var shade = document.getElementById("shade");
 var cardbox = document.getElementById("cardbox");
+var board = document.getElementById("board");
+var quests = document.getElementsByClassName("mission");
+var main = document.getElementById("main");
 
 function init(p) {
     set = p-1;
-    var quests = document.getElementsByClassName("mission");
+    main.classList.add("hidden");
+    board.classList.remove("hidden");    
     for(var i = 0; i < quests.length; i++){
         quests[i].innerHTML = boards[set][i]/1>>0;
     }
@@ -21,15 +25,18 @@ function init(p) {
 
 function start(n) {
     cardbox.classList.remove("hidden");
+    board.style.filter = "blur(5px)"
     votes = 0;
     fails = 0;
     mission = n;
 }
 
-function fail() {
-    shade.classList.remove("hidden");
+function vote(f) {
     votes += 1;
-    fails += 1;
+
+    if (f==1) {
+        fails += 1;
+    }
 
     if (votes>=((boards[set][mission-1])-0.5)) {
         var element = document.getElementById("m"+mission);
@@ -40,23 +47,11 @@ function fail() {
             element.style.background = "darkblue";
         }
         cardbox.classList.add("hidden");
+        board.style.filter = "blur(0px)"
     }
-}
 
-function pass() {
+    shade.innerText = votes+"/"+(boards[set][mission-1]/1>>0);
     shade.classList.remove("hidden");
-    votes += 1;
-
-    if (votes>=((boards[set][mission-1])-0.5)) {
-        var element = document.getElementById("m"+mission);
-        if (fails > 0) {
-            element.style.background = "red";
-        }
-        else {
-            element.style.background = "blue";
-        }
-        cardbox.classList.add("hidden");
-    }
 }
 
 function hide() {
