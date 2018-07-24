@@ -11,6 +11,16 @@ body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
+    user-select: none;
+}
+
+img {
+    display: block;
+    margin: 0 auto 0 auto;
+    min-width: 200px;
+    min-height: 200px;
+    width: 10vw;
+    height: 10vw;
 }
 
 #background {
@@ -26,9 +36,10 @@ body {
     display: grid;
     z-index: 1;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr 1fr;
     grid-template-areas:
         'x x x'
+        'y y y'
         'a b c'
         'd e f';
 }
@@ -41,6 +52,13 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: 144pt;
+}
+
+#mainpic {
+    grid-area: y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #p5 {
@@ -178,6 +196,11 @@ body {
 }
 
 @media only screen and (max-aspect-ratio: 4/3) {
+    img {
+        height: 40vw;
+        width: 40vw;
+    }
+
     #board {
         flex-direction: column;
     }
