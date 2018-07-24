@@ -23,11 +23,48 @@ body {
 #main {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
     z-index: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4fr 1fr 1fr;
+    grid-template-areas:
+        'x x x'
+        'a b c'
+        'd e f';
+}
+
+/* Grid Area Assignments*/
+#title {
+    grid-area: x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 144pt;
+}
+
+#p5 {
+    grid-area: a;
+}
+
+#p6 {
+    grid-area: b;
+}
+
+#p7 {
+    grid-area: c;
+}
+
+#p8 {
+    grid-area: d;
+}
+
+#p9 {
+    grid-area: e;
+}
+
+#p10 {
+    grid-area: f;
 }
 
 #board {
@@ -73,7 +110,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+    font-weight: bold;
+    font-size: 96pt;
 }
 
 .hidden {
@@ -81,15 +119,14 @@ body {
 }
 
 .players {
-    width: calc(10em);
-    height: calc(5em);
+    margin: 0 4vw 4vh;
     border-radius: 25px;
     border: 3pt solid white;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 6pt 3pt white;
-    font-size: 2vw;
+    font-size: 72pt;
     font-weight: bold;
 }
 
@@ -131,7 +168,16 @@ body {
     font-size: 4vh;
 }
 
-@media only screen and (max-aspect-ratio: 1/1) {
+.back {
+    position: fixed;
+    line-height: 0;
+    top: 40px;
+    left: 60px;
+    font-size: 24pt;
+    color: #444;
+}
+
+@media only screen and (max-aspect-ratio: 4/3) {
     #board {
         flex-direction: column;
     }

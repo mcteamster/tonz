@@ -2,28 +2,33 @@
 <head>
     <title> Tonz | Avalon </title>
     <link rel="stylesheet" type="text/css" href="css/avalon.css">
+    <link rel="shortcut icon" href="img/iconD.png" type="image/x-icon">
+    <link rel="icon" href="img/iconD.png" type="image/x-icon">
 </head>
 
 <body>
     <div id="background" onclick="void(0)">
         <div id="main">
+            <div id="title">
+                Avalon
+            </div> 
             <div class="players" id="p5" onclick="init(1)">
-                5 Players
+                5P
             </div>
             <div class="players" id="p6" onclick="init(2)">
-                6 Players
+                6P
             </div>
             <div class="players" id="p7" onclick="init(3)">
-                7 Players
+                7P
             </div>
             <div class="players" id="p8" onclick="init(4)">
-                8 Players
+                8P
             </div>
             <div class="players" id="p9" onclick="init(4)">
-                9 Players
+                9P
             </div>
             <div class="players" id="p10" onclick="init(4)">
-                10 Players
+                10P
             </div>
         </div>
 
@@ -43,6 +48,9 @@
             <div class="mission" id="m5" onclick="start(5)">
                 E
             </div>
+            <div class="back" onclick="back(0)">
+                <h1> &#8635; </h1>
+            </div>
         </div>
 
         <div id="cardbox" class="hidden">
@@ -53,7 +61,11 @@
                 <div class="button" id="pass" onclick="vote(0)">
                     <h1> P </h1>
                 </div>
+                <div class="back" onclick="back(1)">
+                    <h1> &#8635; </h1>
+                </div>
             </div>
+
         </div>
     </div>
 
