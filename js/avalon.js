@@ -107,11 +107,11 @@ function hide() {
         
         // Game End Condition
         if (product()%8==0) {
-            shade.innerText = fails+"x Fail"+"\n Victory";
+            shade.innerText = "Success\nFail x"+fails+"\n Victory";
             board.style.background = "midnightblue"
         }
         else if (product()%27==0) {
-            shade.innerText = fails+"x Fail"+"\n Defeat";
+            shade.innerText = "Failure\nFail x"+fails+"\n Defeat";
             board.style.background = "firebrick"
         }
 
