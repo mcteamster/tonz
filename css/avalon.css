@@ -169,6 +169,9 @@ img {
     border-radius: 50px;
     border: 10pt solid white;
     background: linear-gradient(120deg,#111,#222);
+    background-image: url("../img/avalon/card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
