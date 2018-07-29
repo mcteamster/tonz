@@ -132,6 +132,28 @@ img {
     font-size: 96pt;
 }
 
+@keyframes reveal {
+    from {opacity: 0; visibility: hidden;}
+    to {opacity: 1; visibility: visible;}
+}
+
+@keyframes conceal {
+    from {opacity: 1; visibility: visible;}
+    to {opacity: 0; visibility: hidden;}
+}
+
+.reveal {
+    animation-name: reveal;
+    animation-duration: 0.25s;
+    visibility: visible;
+}
+
+.conceal {
+    animation-name: conceal;
+    animation-duration: 0.25s;
+    visibility: hidden;
+}
+
 .hidden {
     visibility: hidden;
 }

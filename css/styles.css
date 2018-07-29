@@ -343,6 +343,15 @@ img {
     grid-area: info;
 }
 
+#t7 {
+    grid-area: d;
+    background-image: url("../img/games/avalon.png");
+}
+
+#t8 {
+    grid-area: info;
+}
+
 /* Contact Styles */
 #contactContainer {
     background: linear-gradient(45deg,darkslateblue,70%,rebeccapurple);
@@ -511,12 +520,13 @@ img {
     #galleryLanding {
         display: grid;
         grid-template-columns: 20px 60vw 1fr 20px;
-        grid-template-rows: auto 1fr 1fr 1fr 20px auto;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 20px auto;
         grid-template-areas:
             "nav nav nav nav"
             "x info a y"
             "x info b y"
             "x info c y"
+            "x info d y"
             "z z z z"
             "footer footer footer footer"
     }
@@ -585,10 +595,10 @@ img {
     #galleryLanding {
         display: grid;
         grid-template-columns: 40vw 1fr 1fr;
-        grid-template-rows: auto 2fr 1fr 20px auto;
+        grid-template-rows: auto 1fr 1fr 20px auto;
         grid-template-areas:
             "nav nav nav"
-            "info a a"
+            "info a d"
             "info b c"
             "z z z"
             "footer footer footer"

@@ -20,6 +20,7 @@ function init(p) {
     results = [1,1,1,1,1];
     main.classList.add("hidden");
     board.classList.remove("hidden");
+    board.classList.add("reveal");
 
     for(var i = 0; i < quests.length; i++){
         if ((boards[set][i]%1)==0)
@@ -34,10 +35,14 @@ function start(n) {
     votes = 0;
     fails = 0;
     mission = n;
-    shade.classList.remove("hidden");
+    shade.classList.remove("hidden","conceal");
+    shade.classList.add("reveal");
     shade.innerText = cardinal(votes);
-    cardbox.classList.remove("hidden");
     board.style.filter = "blur(5px)";
+    setTimeout(function() {
+        cardbox.classList.add("reveal");
+        cardbox.classList.remove("hidden");
+    }, 500)
 }
 
 function cardinal(v) {
@@ -47,15 +52,15 @@ function cardinal(v) {
     else {
         switch(v) {
             case 0:
-                return "1st of "+(boards[set][mission-1]/1>>0);
+                return "1st\nout of "+(boards[set][mission-1]/1>>0);
             case 1:
-                return "2nd of "+(boards[set][mission-1]/1>>0);
+                return "2nd\nout of "+(boards[set][mission-1]/1>>0);
             case 2:
-                return "3rd of "+(boards[set][mission-1]/1>>0);
+                return "3rd\nout of "+(boards[set][mission-1]/1>>0);
             case 3:
-                return "4th of "+(boards[set][mission-1]/1>>0);
+                return "4th\nout of "+(boards[set][mission-1]/1>>0);
             case 4:
-                return "5th of "+(boards[set][mission-1]/1>>0);
+                return "5th\nout of "+(boards[set][mission-1]/1>>0);
         }
     }
 }
@@ -70,48 +75,60 @@ function vote(f) {
     if (votes>=((boards[set][mission-1])-0.5)) {
         var element = document.getElementById("m"+mission);
         if (fails >= 2) {
-            element.style.background = "darkred";
+            setTimeout(function() {
+                element.style.background = "darkred";
+            }, 500)
         }
         else if (fails >= 1 && (boards[set][mission-1]%1)==0){
-            element.style.background = "darkred";
+            setTimeout(function() {
+                element.style.background = "darkred";
+            }, 500)
         }
         else {
-            element.style.background = "darkblue";
+            setTimeout(function() {
+                element.style.background = "darkblue";
+            }, 500)
         }
         cardbox.classList.add("hidden");
         board.style.filter = "blur(0px)";
     }
 
     shade.innerText = cardinal(votes);
-    shade.classList.remove("hidden");
+    shade.classList.remove("conceal");
+    shade.classList.add("reveal");
 }
 
 function hide() {
     if (votes>=((boards[set][mission-1])-0.5)) {
         if (fails >=2) {
             shade.style.background = "darkred"
-            shade.innerText = "Failure\nFail x"+fails;
+            shade.innerText = "Failure\n("+fails+"x Fails)";
             results[mission-1] = 3;
         }
-        else if (fails >= 1 && (boards[set][mission-1]%1)==0) {
+        else if (fails == 1 && (boards[set][mission-1]%1)==0) {
             shade.style.background = "darkred"
-            shade.innerText = "Failure\nFail x"+fails;
+            shade.innerText = "Failure";
             results[mission-1] = 3;
         }
         else {
             shade.style.background = "darkblue"
-            shade.innerText = "Success\nFail x"+fails;
+            if(fails==1) {
+                shade.innerText = "Success\n(1 Fail)";
+            }
+            else {
+                shade.innerText = "Success"
+            }           
             results[mission-1] = 2;
         }
         
         
         // Game End Condition
         if (product()%8==0) {
-            shade.innerText = "Success\nFail x"+fails+"\n Victory";
+            shade.innerText = shade.innerText+"\nVictory";
             board.style.background = "midnightblue"
         }
         else if (product()%27==0) {
-            shade.innerText = "Failure\nFail x"+fails+"\n Defeat";
+            shade.innerText = shade.innerText+"\nDefeat";
             board.style.background = "firebrick"
         }
 
@@ -119,8 +136,9 @@ function hide() {
         fails = 0;
     }
     else {
-        shade.style.background = "black"        
-        shade.classList.add("hidden");
+        shade.style.background = "black";
+        shade.classList.remove("reveal");  
+        shade.classList.add("conceal");
     }
 }
 
