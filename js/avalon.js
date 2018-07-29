@@ -89,8 +89,10 @@ function vote(f) {
                 element.style.background = "darkblue";
             }, 500)
         }
-        cardbox.classList.add("hidden");
-        board.style.filter = "blur(0px)";
+        setTimeout(function() {
+            cardbox.classList.add("hidden");
+            board.style.filter = "blur(0px)";
+        }, 500)
     }
 
     shade.innerText = cardinal(votes);
