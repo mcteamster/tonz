@@ -134,6 +134,39 @@ input {
     width: 100%;
 }
 
+#buttonbox {
+    width: 50vh;
+    height: 6vh;
+    margin: 1%;
+    min-width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#buttonbox div {
+    width: 20vh;
+    height: 5vh;
+    margin: 1%;
+    min-width: 20vw;
+    border: 3pt white solid;
+    box-shadow: 0 0 6pt 3pt white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#skip {
+    background: darkred;
+}
+
+#assign {
+    background: darkblue;
+}
+
 #pass {
     background: darkblue;
 }
@@ -238,10 +271,10 @@ input {
 
 .secret {
     width: 50vh;
-    height: 6vh;
+    height: 5vh;
     margin: 1%;
     min-width: 40vw;
-    border: 1pt white solid;
+    border: 3pt white solid;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -256,6 +289,11 @@ input {
     left: 60px;
     font-size: 24pt;
     color: #444;
+}
+
+#showroles {
+    top: 40px;
+    left: calc(97vw - 60px);
 }
 
 @media only screen and (max-aspect-ratio: 4/3) {

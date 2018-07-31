@@ -56,6 +56,9 @@
             <div class="back" onclick="back(0)">
                 <h1> &#8635; </h1>
             </div>
+            <div id="showroles" class="back hidden" onclick="showroles()">
+                <h1> &#9733; </h1>
+            </div>
         </div>
 
         <div id="cardbox" class="hidden">
@@ -70,12 +73,11 @@
                     <h1> &#8635; </h1>
                 </div>
             </div>
-
         </div>
     </div>
 
     <div id="roles" class="hidden">
-        <h1> Secret Identities </h1>
+        <h1> Secret Roles </h1>
         <input type="text" value="[Player 1]" onfocus="this.value=''" class="secret" id="s1">
         <input type="text" value="[Player 2]" onfocus="this.value=''" class="secret" id="s2">
         <input type="text" value="[Player 3]" onfocus="this.value=''" class="secret" id="s3">
@@ -86,6 +88,17 @@
         <input type="text" value="[Player 8]" onfocus="this.value=''" class="secret" id="s8">
         <input type="text" value="[Player 9]" onfocus="this.value=''" class="secret" id="s9">
         <input type="text" value="[Player 10]" onfocus="this.value=''" class="secret" id="s10">
+        <div id="buttonbox">
+            <div id="skip" onclick="skip()">
+                Skip
+            </div>
+            <div id="assign" onclick="assign()">
+                Assign
+            </div>
+        </div>
+        <div class="back" onclick="back(0)">
+            <h1> &#8635; </h1>
+        </div>
     </div>
 
     <div id="shade" class="hidden" onclick="hide()">

@@ -3,10 +3,13 @@
 // Global Variables
 var boards = [[2,3,2,3,3],[2,3,4,3,4],[2,3,3,4.5,4],[3,4,4,5.5,5]];
 var set = 0;
+var num = 0;
 var votes = 0;
 var fails = 0;
 var mission = 0;
 var results = [1,1,1,1,1];
+var given = 0;
+var startup = false;
 
 // Objects
 var shade = document.getElementById("shade");
@@ -17,29 +20,80 @@ var main = document.getElementById("main");
 var roles = document.getElementById("roles");
 var players = document.getElementsByClassName("secret");
 
+// Roles
+var characters = [
+    {id:1,name:'Loyal Servant',team:0,sorting:0},
+    {id:2,name:'Merlin',team:0,sorting:0},
+    {id:3,name:'Percival',team:0,sorting:0},
+    {id:4,name:'Mordred',team:1,sorting:0},
+    {id:5,name:'Morgana',team:1,sorting:0},
+    {id:6,name:'Loyal Servant',team:0,sorting:0},
+    {id:7,name:'Assassin',team:1,sorting:0},
+    {id:8,name:'Loyal Servant',team:0,sorting:0},
+    {id:9,name:'Loyal Servant',team:0,sorting:0},
+    {id:10,name:'Oberon',team:1,sorting:0},
+];
+var assignments = [];
+
 function init(p) {
     set = p-1;
     if(set > 3) {
         set = 3;
     }
+    num = p+4;
     results = [1,1,1,1,1];
     main.classList.add("hidden");
     roles.classList.remove("hidden");
     roles.classList.add("reveal");
-    for(var j = p; j < 11; j++) {
-        players[j+4].classList.add("hidden");
-    }
-    setTimeout(() => {
-        board.classList.remove("hidden");
-        board.classList.add("reveal");
-    }, 500);
 
-    for(var i = 0; i < quests.length; i++){
-        if ((boards[set][i]%1)==0)
-            quests[i].innerHTML = boards[set][i]/1>>0;
+    for (var i = 0; i < quests.length; i++) {
+        if ((boards[set][i]%1)==0) {
+            quests[i].innerHTML = (boards[set][i]/1>>0);
+        }
         else {
             quests[i].innerHTML = (boards[set][i]/1>>0)+"*";
         }
+    }
+
+    for (var j = p; j < 11; j++) {
+        players[j+4].classList.add("hidden");
+    }
+}
+
+function skip() {
+    roles.classList.remove("reveal");
+    roles.classList.add("hidden");
+    board.classList.remove("hidden");
+    board.classList.add("reveal");
+}
+
+function assign() {
+    if(given == 0) {
+        var pool = characters.slice(0,num);
+        for(x = 0; x < num; x++) {
+            pool[x].sorting = Math.random();
+            players[x].disabled = true;
+        }
+        pool.sort(function(a,b) {
+            return a.sorting - b.sorting;
+        });
+        assignments = pool;
+        given++;
+        document.getElementById("skip").style.display = "none";
+        document.getElementById("assign").innerText = "Next";
+    } 
+    else if ((given-1) < num) {
+        startup = true;
+        shade.classList.remove("hidden","conceal");
+        shade.classList.add("reveal");
+        shade.innerText = players[given-1].value;
+
+    } 
+    else {
+        roles.classList.remove("reveal");
+        roles.classList.add("hidden");
+        board.classList.remove("hidden");
+        board.classList.add("reveal");
     }
 }
 
@@ -139,15 +193,32 @@ function hide() {
         // Game End Condition
         if (product()%8==0) {
             shade.innerText = shade.innerText+"\nVictory";
-            board.style.background = "midnightblue"
+            board.style.background = "midnightblue";
+            if(given > 0) {
+                document.getElementById("showroles").classList.remove("hidden");
+            }
         }
         else if (product()%27==0) {
             shade.innerText = shade.innerText+"\nDefeat";
-            board.style.background = "firebrick"
+            board.style.background = "firebrick";
+            if(given > 0) {
+                document.getElementById("showroles").classList.remove("hidden");
+            }
         }
 
         votes = 0;
         fails = 0;
+    }
+    else if (startup == true) {
+        shade.innerText = assignments[given-1].name;
+        if(assignments[given-1].team==0) {
+            shade.style.background = "darkblue";
+        }
+        else if(assignments[given-1].team==1) {
+            shade.style.background = "darkred";
+        }
+        given++;
+        startup = false;
     }
     else {
         shade.style.background = "black";
@@ -162,6 +233,28 @@ function product() {
         product = product*results[i];
     }
     return product;
+}
+
+function showroles () {
+    shade.classList.remove("conceal");
+    shade.classList.add("reveal");
+    shade.innerText = "Reveal Roles"
+    setTimeout(() => {
+        roles.classList.remove("hidden");
+        roles.classList.add("reveal");
+        document.getElementById("skip").style.display = "none";
+        document.getElementById("assign").style.display = "none";
+        for(y=0; y<num; y++) {
+            players[y].value += " > "+assignments[y].name;
+            players[y].style.color = "white";
+            if(assignments[y].team==0) {
+                players[y].style.background = "darkblue";
+            }
+            else if(assignments[y].team==1) {
+                players[y].style.background = "darkred";
+            }
+        }
+    }, 500);
 }
 
 function back(x) {
