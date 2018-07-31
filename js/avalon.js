@@ -14,13 +14,25 @@ var cardbox = document.getElementById("cardbox");
 var board = document.getElementById("board");
 var quests = document.getElementsByClassName("mission");
 var main = document.getElementById("main");
+var roles = document.getElementById("roles");
+var players = document.getElementsByClassName("secret");
 
 function init(p) {
     set = p-1;
+    if(set > 3) {
+        set = 3;
+    }
     results = [1,1,1,1,1];
     main.classList.add("hidden");
-    board.classList.remove("hidden");
-    board.classList.add("reveal");
+    roles.classList.remove("hidden");
+    roles.classList.add("reveal");
+    for(var j = p; j < 11; j++) {
+        players[j+4].classList.add("hidden");
+    }
+    setTimeout(() => {
+        board.classList.remove("hidden");
+        board.classList.add("reveal");
+    }, 500);
 
     for(var i = 0; i < quests.length; i++){
         if ((boards[set][i]%1)==0)
