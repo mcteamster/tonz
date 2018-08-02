@@ -30,6 +30,11 @@ input {
     font-size: 2em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 #background {
     width: 100vw;
     height: 100vh;
@@ -272,7 +277,7 @@ input {
 .secret {
     width: 50vh;
     height: 5vh;
-    margin: 1%;
+    margin: 5px;
     min-width: 40vw;
     border: 3pt white solid;
     border-radius: 50px;
