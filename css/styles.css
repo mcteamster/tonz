@@ -471,6 +471,10 @@ img {
         display: flex;
     }
 
+    .exception {
+        display: flex;
+    }
+
     #aboutOne h1 {
         font-size: 20vw;
     }
