@@ -10,11 +10,12 @@ body {
     background: black;
     color: white;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    /*font-family: 'Courier New', Courier, monospace;*/
+    font-family: 'Trebuchet MS', Arial, monospace;
 }
 
 h1 {
-    font-size: 72pt;
+    font-size: 60pt;
     margin: 0px 2vw;
 }
 
@@ -293,7 +294,7 @@ img {
 
 #aboutFive {
     grid-area: e;
-    min-height: 93vh;
+    min-height: 96vh;
 }
 
 #skillTree {
@@ -355,7 +356,7 @@ img {
 /* Contact Styles */
 #contactContainer {
     background: linear-gradient(45deg,darkslateblue,70%,rebeccapurple);
-    height: 95vh;
+    height: 100vh;
 }
 
 #contactContent {
@@ -505,7 +506,6 @@ img {
             "x b c y"
             "x d d y"
             "e e e e"
-            "footer footer footer footer";
     }
 
     #aboutTwo {
@@ -532,7 +532,6 @@ img {
             "x info c y"
             "x info d y"
             "z z z z"
-            "footer footer footer footer"
     }
 
     #contactContainer {
@@ -571,7 +570,6 @@ img {
             "a a c x"
             "y d d x"
             "e e e e"
-            "footer footer footer footer";
     }
 
     #aboutTwo {
@@ -594,18 +592,19 @@ img {
         width: 20vw;
         padding: 2vw;
         margin: 1vw;
+        cursor: pointer;
     }
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 40vw 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 20px auto;
+        grid-template-columns: 40vw 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr 20px auto;
         grid-template-areas:
-            "nav nav nav"
-            "info a d"
-            "info b c"
-            "z z z"
-            "footer footer footer"
+            "nav nav nav nav"
+            "info a a a"
+            "info a a a"
+            "info b c d"
+            "z z z z"
     }
 
     #contactContainer {
