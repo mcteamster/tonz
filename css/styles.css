@@ -183,6 +183,14 @@ img {
 
 .download {
     display: flex;
+    flex-direction: column;
+}
+
+.download img {
+    min-width: auto;
+    min-height: auto;
+    width: auto;
+    height: 10vh;
 }
 
 .download img:hover {
@@ -192,6 +200,13 @@ img {
 
 .nodownload {
     display: none;
+}
+
+.nodownload img {
+    min-width: auto;
+    min-height: auto;
+    width: auto;
+    height: 10vh;
 }
 
 .back {
