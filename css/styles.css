@@ -442,7 +442,7 @@ img {
     color: goldenrod;
     font-family: 'Rock Salt', cursive;
     grid-area: a;
-    font-size: 8em;
+    font-size: 7em;
     padding: 2% 0%;
     animation-name: floatdown, invis;
     animation-duration: 2s, 2s;
