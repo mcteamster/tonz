@@ -426,37 +426,42 @@ img {
     background-size: auto 75%;
     background-position: bottom right;
     height: 100vh;
+    animation-name: fade, invis;
+    animation-duration: 1s, 0s;
+    animation-delay: 0s, 0s;
 }
 
 #halloweenNav {
     color: #666;
     animation-name: floatdown, invis;
-    animation-duration: 1s, 6s;
-    animation-delay: 6s, 0s;
+    animation-duration: 1s, 9s;
+    animation-delay: 9s, 0s;
 }
 
 #halloweenTitle {
+    color: goldenrod;
+    font-family: 'Rock Salt', cursive;
     grid-area: a;
     font-size: 8em;
     padding: 2% 0%;
     animation-name: floatdown, invis;
-    animation-duration: 2s, 1s;
-    animation-delay: 1s, 0s;
+    animation-duration: 2s, 2s;
+    animation-delay: 2s, 0s;
 }
 
 #halloweenDescription {
     grid-area: b;
     padding: 0% 10%;
     animation-name: fade, invis;
-    animation-duration: 1.5s, 3s;
-    animation-delay: 3s, 0s;
+    animation-duration: 1.5s, 5s;
+    animation-delay: 5s, 0s;
 }
 
 #halloweenDownload {
     grid-area: c;
     animation-name: fade, invis;
-    animation-duration: 1.5s, 3.5s;
-    animation-delay: 3.5s, 0s;
+    animation-duration: 1.5s, 5.5s;
+    animation-delay: 5.5s, 0s;
 }
 
 /* Mobile Only Styles*/
@@ -550,8 +555,14 @@ img {
     }
 
     #halloweenLanding {
-        background-size: auto 45%;
+        background-size: auto 50%;
         background-position: bottom center;
+    }
+
+    #halloweenDownload {
+        position: absolute;
+        width: 100vw;
+        bottom: 3vh;
     }
 }
 
