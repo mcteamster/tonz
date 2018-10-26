@@ -560,9 +560,11 @@ img {
     }
 
     #halloweenDownload {
+        background: linear-gradient(transparent,black);
         position: absolute;
         width: 100vw;
-        bottom: 3vh;
+        bottom: 0vh;
+        padding: 0 0 1vh 0;
     }
 }
 
