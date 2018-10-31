@@ -439,7 +439,11 @@ img {
 }
 
 #halloweenTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: goldenrod;
+    font-weight: bold;
     font-family: 'Rock Salt', cursive;
     grid-area: a;
     font-size: 7em;
@@ -643,7 +647,7 @@ img {
         background-size: 40% auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 5vh;
+        grid-template-rows: auto 2fr 1fr 1fr 5vh;
         grid-template-areas:
             "nav nav nav"
             "a a a"
@@ -728,7 +732,7 @@ img {
     #halloweenLanding {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 5vh;
+        grid-template-rows: auto 2fr 1fr 1fr 5vh;
         grid-template-areas:
             "nav nav nav nav nav"
             "x a a z y"
