@@ -1,1 +1,1 @@
-# Source code for tonz.io
+# Code for tonz.io
