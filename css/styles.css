@@ -334,45 +334,40 @@ img {
     min-height: 100vh;
 }
 
-#t0 {
-    grid-area: info;
-    display: flex;
-}
-
 #t1 {
     grid-area: a;
-    background-image: url("../img/games/wd.png");
+    background-image: url("../img/games/bwc.png");
 }
 
 #t2 {
-    grid-area: info;
+    grid-area: a;
 }
 
 #t3 {
     grid-area: b;
-    background-image: url("../img/games/ms.png");
+    background-image: url("../img/games/wd.png");
 }
 
 #t4 {
-    grid-area: info;
+    grid-area: b;
 }
 
 #t5 {
     grid-area: c;
-    background-image: url("../img/games/2048.png");
+    background-image: url("../img/games/ms.png");
 }
 
 #t6 {
-    grid-area: info;
+    grid-area: c;
 }
 
 #t7 {
     grid-area: d;
-    background-image: url("../img/games/bwc.png");
+    background-image: url("../img/games/2048.png");
 }
 
 #t8 {
-    grid-area: info;
+    grid-area: d;
 }
 
 /* Contact Styles */
@@ -612,18 +607,16 @@ img {
         width: 50vw;
         margin: 0 4vw 4vw 4vw;
     }
-
+    
     #galleryLanding {
         display: grid;
-        grid-template-columns: 20px 60vw 1fr 20px;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 20px auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 20px auto;
         grid-template-areas:
-            "nav nav nav nav"
-            "x info a y"
-            "x info b y"
-            "x info c y"
-            "x info d y"
-            "z z z z"
+            "nav nav"
+            "a b"
+            "c d"
+            "z info"
     }
 
     #contactContainer {
@@ -702,14 +695,13 @@ img {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 40vw 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 1fr 20px auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1fr 20px auto;
         grid-template-areas:
-            "nav nav nav nav"
-            "info a a a"
-            "info a a a"
-            "info b c d"
-            "z z z z"
+            "nav nav"
+            "a b"
+            "c d"
+            "z info"
     }
 
     #contactContainer {
