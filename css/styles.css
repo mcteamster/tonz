@@ -126,17 +126,15 @@ img {
 }
 
 .leaf .tooltip {
-    visibility: hidden;
     background: rgba(29, 29, 97, 0.95);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    position: fixed;
-    top: 2vmax;
-    padding: 2vmax 5vw;
-    left: 10vw;
-    width: 70vw;
+    top: calc(-80px - 4vh - 2em);
+    left: calc(-2em);
+    padding: 1em;
+    position: relative;
     border-radius: 1em;
     border: none;
 }
@@ -147,7 +145,7 @@ img {
 }
 
 .leaf:hover .tooltip {
-    visibility: visible;
+    display: flex;
 }
 
 .tile {
