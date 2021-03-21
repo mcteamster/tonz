@@ -412,6 +412,50 @@ img {
     animation-delay: 1s, 0s;
 }
 
+/* Blog Styles */
+#blogContainer {
+    background: linear-gradient(45deg,slateblue,70%,darkslateblue);
+    height: 100vh;
+}
+
+#blogContent {
+    grid-area: a;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#blogContent .content {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation-name: floatin, invis;
+}
+
+#blogContent .content img {
+    margin: 0 0 0 5vw;
+}
+
+#blogOne {
+    animation-duration: 1s, 0s;
+    animation-delay: 0s, 0s;
+}
+
+#blogTwo {
+    animation-duration: 1s, 0.5s;
+    animation-delay: 0.5s, 0s;
+}
+
+#blogThree {
+    animation-duration: 1s, 1s;
+    animation-delay: 1s, 0s;
+}
+
 /* Halloween Styles */
 #halloweenLanding {
     background-image: url("../halloween/splash.png");
@@ -628,6 +672,17 @@ img {
             "y b z"
     }
 
+    #blogContainer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 5vh 5vh 80vh 5vh;
+        grid-template-areas:
+            "landing landing landing"
+            "x x x"
+            "y a z"
+            "y b z"
+    }
+
     #halloweenLanding {
         background-size: 40% auto;
         display: grid;
@@ -703,6 +758,17 @@ img {
     }
 
     #contactContainer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 5vh 5vh 80vh 5vh;
+        grid-template-areas:
+            "landing landing landing"
+            "x x x"
+            "y a z"
+            "y b z"
+    }
+
+    #blogContainer {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         grid-template-rows: 5vh 5vh 80vh 5vh;
