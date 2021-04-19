@@ -462,9 +462,8 @@ img {
     justify-content: flex-start;
     align-items: center;
     text-align: justify;
-    width: calc(100% - 3em);
-    padding: 1.5em;
-    max-width: 750px;
+    width: calc(100% - 10em);
+    padding: 1em 5em;
 }
 
 /* Halloween Styles */
@@ -788,6 +787,10 @@ img {
             "x x x"
             "y a z"
             "y b z"
+    }
+
+    #blogBody {
+        max-width: 750px;
     }
 
     #halloweenLanding {
