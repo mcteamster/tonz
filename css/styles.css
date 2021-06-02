@@ -109,7 +109,7 @@ img {
 .leaf {
     width: calc(80px + 4vh);
     height: calc(80px + 4vh);
-    margin: calc(30px + 1.5vh) calc(10px + 2vw);
+    margin: calc(30px + 1.5vh) calc(10px + 3vw);
     background: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -643,8 +643,8 @@ img {
             "x a a y"
             "x a a y"
             "x b c y"
-            "x d d y"
             "e e e e"
+            "w d d z"
     }
 
     #aboutTwo {
@@ -729,8 +729,8 @@ img {
             "landing landing landing landing"
             "a a b x"
             "a a c x"
-            "y d d x"
             "e e e e"
+            "y d d z"
     }
 
     #aboutTwo {
