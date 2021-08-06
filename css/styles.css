@@ -47,6 +47,10 @@ a {
     color: inherit;
 }
 
+u {
+    cursor: pointer;
+}
+
 label {
     display: grid;
 }
