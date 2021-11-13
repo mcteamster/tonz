@@ -170,7 +170,6 @@ img {
 .information {
     background: black;
     color: white;
-    display: none;
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(60deg,midnightblue,slateblue);
@@ -345,39 +344,39 @@ img {
 }
 
 #t1 {
-    grid-area: a;
+    grid-area: a1;
     background-image: url("../img/games/bwc.png");
 }
 
 #t2 {
-    grid-area: a;
+    grid-area: a2;
 }
 
 #t3 {
-    grid-area: b;
+    grid-area: b1;
     background-image: url("../img/games/wd.png");
 }
 
 #t4 {
-    grid-area: b;
+    grid-area: b2;
 }
 
 #t5 {
-    grid-area: c;
+    grid-area: c1;
     background-image: url("../img/games/ms.png");
 }
 
 #t6 {
-    grid-area: c;
+    grid-area: c2;
 }
 
 #t7 {
-    grid-area: d;
+    grid-area: d1;
     background-image: url("../img/games/2048.png");
 }
 
 #t8 {
-    grid-area: d;
+    grid-area: d2;
 }
 
 /* Contact Styles */
@@ -582,10 +581,6 @@ img {
         background: transparent;
     }
 
-    .information h2 {
-        display: none;
-    }
-
     .information p, h4 {
         margin: 0 10vw;
     }
@@ -674,12 +669,14 @@ img {
     
     #galleryLanding {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 20px auto;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 20px auto;
         grid-template-areas:
             "nav nav"
-            "a b"
-            "c d"
+            "a1 a2"
+            "b1 b2"
+            "c1 c2"
+            "d1 d2"
             "z info"
     }
 
@@ -770,13 +767,15 @@ img {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 1fr 1fr 20px auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 65vh 25vh 65vh 25vh 5vh;
         grid-template-areas:
-            "nav nav"
-            "a b"
-            "c d"
-            "z info"
+            "nav nav nav"
+            "a1 a1 a1"
+            "a2 a2 a2"
+            "b1 c1 d1"
+            "b2 c2 d2"
+            "z info info"
     }
 
     #contactContainer {
