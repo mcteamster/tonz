@@ -345,7 +345,7 @@ img {
 
 #t1 {
     grid-area: a1;
-    background-image: url("../img/games/bwc.png");
+    background-image: url("../img/games/twinge.png");
 }
 
 #t2 {
@@ -354,7 +354,7 @@ img {
 
 #t3 {
     grid-area: b1;
-    background-image: url("../img/games/wd.png");
+    background-image: url("../img/games/dg.png");
 }
 
 #t4 {
@@ -363,7 +363,7 @@ img {
 
 #t5 {
     grid-area: c1;
-    background-image: url("../img/games/ms.png");
+    background-image: url("../img/games/bwc.png");
 }
 
 #t6 {
@@ -372,11 +372,29 @@ img {
 
 #t7 {
     grid-area: d1;
-    background-image: url("../img/games/2048.png");
+    background-image: url("../img/games/wd.png");
 }
 
 #t8 {
     grid-area: d2;
+}
+
+#t9 {
+    grid-area: e1;
+    background-image: url("../img/games/ms.png");
+}
+
+#t10 {
+    grid-area: e2;
+}
+
+#t11 {
+    grid-area: f1;
+    background-image: url("../img/games/2048.png");
+}
+
+#t12 {
+    grid-area: f2;
 }
 
 /* Contact Styles */
@@ -670,13 +688,15 @@ img {
     #galleryLanding {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 20px auto;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 20px auto;
         grid-template-areas:
             "nav nav"
             "a1 a2"
             "b1 b2"
             "c1 c2"
             "d1 d2"
+            "e1 e2"
+            "f1 f2"
             "z info"
     }
 
@@ -771,10 +791,10 @@ img {
         grid-template-rows: auto 65vh 25vh 65vh 25vh 5vh;
         grid-template-areas:
             "nav nav nav"
-            "a1 a1 a1"
-            "a2 a2 a2"
-            "b1 c1 d1"
-            "b2 c2 d2"
+            "a1 b1 c1"
+            "a2 b2 c2"
+            "d1 e1 f1"
+            "d2 e2 f2"
             "z info info"
     }
 
