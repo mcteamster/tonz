@@ -302,30 +302,7 @@ img {
 
 #aboutFour {
     grid-area: d;
-    justify-content: flex-start;
-}
-
-#teams {
-    margin: 1vh 0 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: baseline;
-    flex-wrap: wrap;
-}
-
-#teams div {
-    width: 80vw;
-    margin: 0 4vw 4vw 4vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#aboutFive {
-    grid-area: e;
-    min-height: 96vh;
+    min-height: 95vh;
 }
 
 #skillTree {
@@ -668,8 +645,7 @@ img {
             "x a a y"
             "x a a y"
             "x b c y"
-            "e e e e"
-            "w d d z"
+            "d d d d"
     }
 
     #aboutTwo {
@@ -758,8 +734,7 @@ img {
             "landing landing landing landing"
             "a a b x"
             "a a c x"
-            "e e e e"
-            "y d d z"
+            "d d d d"
     }
 
     #aboutTwo {
