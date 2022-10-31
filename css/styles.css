@@ -168,11 +168,10 @@ img {
 }
 
 .information {
-    background: black;
+    background: transparent;
     color: white;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(60deg,midnightblue,slateblue);
 }
 
 .tile h2 {
@@ -233,28 +232,56 @@ img {
 
 /* Animations */
 @keyframes floatin {
-    from {opacity: 0; position: relative; top: 5vh;}
-    to {opacity: 1; position: relative; top: 0px;}
+    from {
+        opacity: 0;
+        position: relative;
+        top: 5vh;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0px;
+    }
 }
 
 @keyframes invis {
-    from {opacity: 0;}
-    to {opacity: 0;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes floatdown {
-    from {opacity: 0; position: relative; bottom: 5vh;}
-    to {opacity: 1; position: relative; bottom: 0px;}
+    from {
+        opacity: 0;
+        position: relative;
+        bottom: 5vh;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        bottom: 0px;
+    }
 }
 
 @keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* About Styles */
 #aboutContainer {
-    background: linear-gradient(120deg,steelblue,25%,midnightblue);
+    background: linear-gradient(120deg, steelblue, 25%, midnightblue);
 }
 
 #aboutLanding {
@@ -313,70 +340,79 @@ img {
 
 /* Gallery Styles */
 #galleryContainer {
-    background: linear-gradient(60deg,midnightblue,60%,slateblue);
+    background: linear-gradient(60deg, midnightblue, 60%, slateblue);
 }
 
 #galleryLanding {
     min-height: 100vh;
 }
 
-#t1 {
-    grid-area: a1;
+#t14 {
+    grid-area: t14;
+}
+
+#t13 {
+    grid-area: t13;
+    background-image: url("../img/games/fton.png");
+}
+
+#t12 {
+    grid-area: t12;
+}
+
+#t11 {
+    grid-area: t11;
     background-image: url("../img/games/twinge.png");
 }
 
-#t2 {
-    grid-area: a2;
+#t10 {
+    grid-area: t10;
 }
 
-#t3 {
-    grid-area: b1;
+#t9 {
+    grid-area: t9;
     background-image: url("../img/games/dg.png");
 }
 
-#t4 {
-    grid-area: b2;
+#t8 {
+    grid-area: t8;
 }
 
-#t5 {
-    grid-area: c1;
+#t7 {
+    grid-area: t7;
     background-image: url("../img/games/bwc.png");
 }
 
 #t6 {
-    grid-area: c2;
+    grid-area: t6;
 }
 
-#t7 {
-    grid-area: d1;
+#t5 {
+    grid-area: t5;
     background-image: url("../img/games/wd.png");
 }
 
-#t8 {
-    grid-area: d2;
+#t4 {
+    grid-area: t4;
 }
 
-#t9 {
-    grid-area: e1;
+#t3 {
+    grid-area: t3;
     background-image: url("../img/games/ms.png");
 }
 
-#t10 {
-    grid-area: e2;
+#t2 {
+    grid-area: t2;
 }
 
-#t11 {
-    grid-area: f1;
+#t1 {
+    grid-area: t1;
     background-image: url("../img/games/2048.png");
-}
-
-#t12 {
-    grid-area: f2;
 }
 
 /* Contact Styles */
 #contactContainer {
-    background: linear-gradient(45deg,darkslateblue,70%,rebeccapurple);
+    background: linear-gradient(45deg, darkslateblue, 70%, rebeccapurple);
     height: 100vh;
 }
 
@@ -420,7 +456,7 @@ img {
 
 /* Blog Styles */
 #blogContainer {
-    background: linear-gradient(45deg,slateblue,70%,darkslateblue);
+    background: linear-gradient(45deg, slateblue, 70%, darkslateblue);
     min-height: 100vh;
 }
 
@@ -526,7 +562,7 @@ img {
     h2 {
         font-size: 6vw;
     }
-    
+
     p {
         font-size: 4vw;
     }
@@ -534,12 +570,12 @@ img {
     h4 {
         font-size: 3vw;
     }
-    
+
     img {
         height: 40vw;
         width: 40vw;
     }
-    
+
     .nav {
         width: 100%;
         justify-content: space-around;
@@ -571,12 +607,13 @@ img {
         color: white;
         margin: 0 0 4vw 0;
     }
-    
+
     .information {
         background: transparent;
     }
 
-    .information p, h4 {
+    .information p,
+    h4 {
         margin: 0 10vw;
     }
 
@@ -607,7 +644,7 @@ img {
     }
 
     #halloweenDownload {
-        background: linear-gradient(transparent,black);
+        background: linear-gradient(transparent, black);
         position: absolute;
         width: 100vw;
         bottom: 0vh;
@@ -617,7 +654,9 @@ img {
 
 /* Tablet Only Styles*/
 @media only screen and (min-aspect-ratio: 69/100) and (max-aspect-ratio: 4/3) {
-    .information p, h4 {
+
+    .information p,
+    h4 {
         margin: 0 20px;
     }
 
@@ -632,7 +671,7 @@ img {
     .exception {
         display: flex;
     }
-    
+
     .back {
         display: none;
     }
@@ -660,19 +699,20 @@ img {
         width: 50vw;
         margin: 0 4vw 4vw 4vw;
     }
-    
+
     #galleryLanding {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 20px auto;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px auto;
         grid-template-areas:
             "nav nav"
-            "a1 a2"
-            "b1 b2"
-            "c1 c2"
-            "d1 d2"
-            "e1 e2"
-            "f1 f2"
+            "t13 t14"
+            "t11 t12"
+            "t9 t10"
+            "t7 t8"
+            "t5 t6"
+            "t3 t4"
+            "t1 t2"
             "z info"
     }
 
@@ -714,12 +754,13 @@ img {
 
 /* Desktop Only Styles */
 @media only screen and (min-aspect-ratio: 4/3) {
-    input[type="checkbox"]:not(:checked) + .hiddenText {
+    input[type="checkbox"]:not(:checked)+.hiddenText {
         height: 0;
         opacity: 0;
     }
 
-    .information p, h4 {
+    .information p,
+    h4 {
         margin: 0 20px;
     }
 
@@ -762,15 +803,15 @@ img {
 
     #galleryLanding {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 65vh 25vh 65vh 25vh 5vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 34vh 15vh 25vh 15vh 5vh;
         grid-template-areas:
-            "nav nav nav"
-            "a1 b1 c1"
-            "a2 b2 c2"
-            "d1 e1 f1"
-            "d2 e2 f2"
-            "z info info"
+            "nav nav nav nav"
+            "t13 t13 t11 t9"
+            "t14 t14 t12 t10"
+            "t7 t5 t3 t1"
+            "t8 t6 t4 t2"
+            "info info info info"
     }
 
     #contactContainer {
