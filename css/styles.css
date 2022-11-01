@@ -759,6 +759,10 @@ img {
         opacity: 0;
     }
 
+    .information {
+        display: none;
+    }
+
     .information p,
     h4 {
         margin: 0 20px;
@@ -804,13 +808,12 @@ img {
     #galleryLanding {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 34vh 15vh 25vh 15vh 5vh;
+        grid-template-rows: auto 29vh 29vh 29vh 5vh;
         grid-template-areas:
             "nav nav nav nav"
-            "t13 t13 t11 t9"
-            "t14 t14 t12 t10"
-            "t7 t5 t3 t1"
-            "t8 t6 t4 t2"
+            "t13 t13 t11 t5"
+            "t13 t13 t9 t3"
+            "t13 t13 t7 t1"
             "info info info info"
     }
 
