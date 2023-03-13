@@ -68,6 +68,23 @@ img {
     height: 10vw;
 }
 
+table {
+    font-size: 16pt;
+    border-collapse: collapse;
+    text-align: center;
+    min-width: 90%;
+}
+
+th {
+    padding: 1em;
+    border: 2pt solid white;
+}
+
+td {
+    padding: 1em;
+    border: 2pt solid white;
+}
+
 /* Global Class Styles */
 .landing {
     grid-area: landing;
