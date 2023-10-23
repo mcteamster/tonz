@@ -364,67 +364,12 @@ td {
     min-height: 100vh;
 }
 
-#t14 {
-    grid-area: t14;
-}
-
-#t13 {
-    grid-area: t13;
-    background-image: url("../img/games/fton.png");
-}
-
-#t12 {
-    grid-area: t12;
-}
-
-#t11 {
-    grid-area: t11;
-    background-image: url("../img/games/twinge.png");
-}
-
-#t10 {
-    grid-area: t10;
-}
-
-#t9 {
-    grid-area: t9;
-    background-image: url("../img/games/dg.png");
-}
-
-#t8 {
-    grid-area: t8;
-}
-
-#t7 {
-    grid-area: t7;
-    background-image: url("../img/games/bwc.png");
-}
-
-#t6 {
-    grid-area: t6;
-}
-
-#t5 {
-    grid-area: t5;
-    background-image: url("../img/games/wd.png");
-}
-
-#t4 {
-    grid-area: t4;
-}
-
-#t3 {
-    grid-area: t3;
-    background-image: url("../img/games/ms.png");
-}
-
-#t2 {
-    grid-area: t2;
-}
-
-#t1 {
-    grid-area: t1;
-    background-image: url("../img/games/2048.png");
+#galleryContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 /* Contact Styles */
@@ -717,22 +662,6 @@ td {
         margin: 0 4vw 4vw 4vw;
     }
 
-    #galleryLanding {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px auto;
-        grid-template-areas:
-            "nav nav"
-            "t13 t14"
-            "t11 t12"
-            "t9 t10"
-            "t7 t8"
-            "t5 t6"
-            "t3 t4"
-            "t1 t2"
-            "z info"
-    }
-
     #contactContainer {
         display: grid;
         grid-template-columns: 1fr auto 1fr;
@@ -820,18 +749,6 @@ td {
         padding: 2vw;
         margin: 1vw;
         cursor: pointer;
-    }
-
-    #galleryLanding {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 29vh 29vh 29vh 5vh;
-        grid-template-areas:
-            "nav nav nav nav"
-            "t13 t13 t11 t5"
-            "t13 t13 t9 t3"
-            "t13 t13 t7 t1"
-            "info info info info"
     }
 
     #contactContainer {
