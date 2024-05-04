@@ -105,6 +105,13 @@ td {
     font-size: 16pt;
 }
 
+.nav a img {
+    min-width: 0;
+    min-height: 0;
+    height: 1.25em;
+    width: auto;
+}
+
 .title {
     display: flex;
     flex-direction: column;
