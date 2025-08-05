@@ -79,7 +79,6 @@ td {
 
 .content {
   width: 100vw;
-  max-width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +91,7 @@ td {
 }
 
 .info {
-  min-height: 50lvh;
+  min-height: 67lvh;
 }
 
 /* Blog Styles */
@@ -103,8 +102,7 @@ td {
 
 .blogBody {
   text-align: justify;
-  width: 100vw;
-  padding: 1em 5em;
+  max-width: 90vw;
 }
 
 .branch {
