@@ -1,798 +1,115 @@
-/* CSS for Tony Zhang's Website */
-
 /* Global Element Styles */
 body {
-    width: 100%;
-    height: 100%;
-    min-width: 480px;
-    padding: 0;
-    margin: 0;
-    background: black;
-    color: white;
-    text-align: center;
-    font-family: 'Trebuchet MS', Arial, monospace;
-}
-
-h1 {
-    font-size: 60pt;
-    margin: 0px 2vw;
-}
-
-h2 {
-    font-size: 24pt;
-    margin: 0 1vw;
-}
-
-h3 {
-    padding: 0;
-    margin: 0;
-}
-
-h4 {
-    font-size: 12pt;
-}
-
-p {
-    font-size: 16pt;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  width: 100vw;
+  height: 100svh;
+  min-width: 600px;
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: 'Trebuchet MS', Arial, monospace;
+  font-size: calc(max(2svh, 10pt));
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 u {
-    cursor: pointer;
-}
-
-label {
-    display: grid;
-}
-
-input {
-    display: none;
+  cursor: pointer;
 }
 
 img {
-    display: block;
-    margin: 0 auto 0 auto;
-    min-width: 200px;
-    min-height: 200px;
-    width: 10vw;
-    height: 10vw;
+  display: block;
+  margin: 0 auto 0 auto;
+  min-width: 200px;
+  min-height: 200px;
+  width: 10svh;
+  height: 10svh;
 }
 
 table {
-    font-size: 16pt;
-    border-collapse: collapse;
-    text-align: center;
-    min-width: 90%;
+  font-size: 16pt;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 90%;
 }
 
 th {
-    padding: 1em;
-    border: 2pt solid white;
+  padding: 1em;
+  border: 2pt solid white;
 }
 
 td {
-    padding: 1em;
-    border: 2pt solid white;
+  padding: 1em;
+  border: 2pt solid white;
 }
 
 /* Global Class Styles */
-.landing {
-    grid-area: landing;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.container {
+  width: 100vw;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
-    grid-area: nav;
-    display: flex;
-    justify-content: flex-start;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  font-weight: bold;
 }
 
 .nav a {
-    padding: 1em 2em;
-    font-weight: bold;
-    font-size: 16pt;
+  padding: 1em 2em;
 }
 
 .nav a img {
-    min-width: 0;
-    min-height: 0;
-    height: 1.25em;
-    width: auto;
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 1.25em;
+  width: auto;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-}
-
-.hiddenText {
-    transition: all 1s ease;
-    overflow: hidden;
-}
-
-.branch {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.leaf {
-    width: calc(80px + 4vh);
-    height: calc(80px + 4vh);
-    margin: calc(30px + 1.5vh) calc(10px + 3vw);
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.leaf p {
-    width: calc(120px + 4vh);
-    position: relative;
-    top: calc(70px + 4vh);
-    left: -20px;
-    font-weight: bold;
-    font-size: 14pt;
-}
-
-.leaf .tooltip {
-    background: rgba(29, 29, 97, 0.95);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    top: calc(-80px - 4vh - 2em);
-    left: calc(-2em);
-    padding: 1em;
-    position: relative;
-    border-radius: 1em;
-    border: none;
-}
-
-.leaf:hover {
-    position: relative;
-    top: -5pt;
-}
-
-.leaf:hover .tooltip {
-    display: flex;
-}
-
-.tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black;
-    color: white;
-}
-
-.picture {
-    background-repeat: no-repeat;
-    background-size: contain, cover;
-    background-position: center;
-    cursor: pointer;
-}
-
-.information {
-    background: transparent;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tile h2 {
-    font-size: 4em;
-}
-
-.download {
-    display: flex;
-    flex-direction: column;
-}
-
-.download img {
-    min-width: auto;
-    min-height: auto;
-    width: auto;
-    height: 10vh;
-}
-
-.download img:hover {
-    position: relative;
-    top: -2pt;
-}
-
-.nodownload {
-    display: none;
-}
-
-.nodownload img {
-    min-width: auto;
-    min-height: auto;
-    width: auto;
-    height: 10vh;
-}
-
-.back {
-    cursor: pointer;
-    font-size: 3vh;
-    text-decoration: underline;
-}
-
-.footer {
-    grid-area: footer;
-    min-height: 5vh;
-    color: white;
-    background: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.subtitle {
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Animations */
-@keyframes floatin {
-    from {
-        opacity: 0;
-        position: relative;
-        top: 5vh;
-    }
-
-    to {
-        opacity: 1;
-        position: relative;
-        top: 0px;
-    }
-}
-
-@keyframes invis {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes floatdown {
-    from {
-        opacity: 0;
-        position: relative;
-        bottom: 5vh;
-    }
-
-    to {
-        opacity: 1;
-        position: relative;
-        bottom: 0px;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+  width: 100vw;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* About Styles */
-#aboutContainer {
-    background: linear-gradient(120deg, steelblue, 25%, midnightblue);
+.title {
+  min-height: 100svh;
 }
 
-#aboutLanding {
-    min-height: 5vh;
-}
-
-#aboutOne {
-    grid-area: a;
-    min-height: 95vh;
-    justify-content: center;
-}
-
-#aboutOne h1 {
-    font-size: 8em;
-}
-
-#aboutOne h2 {
-    margin: 4vh 8vw;
-}
-
-#aboutTwo {
-    grid-area: b;
-    margin: 0 20px;
-    min-height: 35vh;
-}
-
-#aboutTwo div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#aboutThree {
-    grid-area: c;
-    margin: 0 20px;
-    min-height: 35vh;
-    justify-content: center;
-}
-
-#aboutThree div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#aboutFour {
-    grid-area: d;
-    min-height: 95vh;
-}
-
-#skillTree {
-    display: flex;
-    min-height: 80vh;
-    margin: 0 5vw 30px 5vw;
-}
-
-/* Gallery Styles */
-#galleryContainer {
-    background: linear-gradient(60deg, midnightblue, 60%, slateblue);
-}
-
-#galleryLanding {
-    min-height: 100vh;
-}
-
-#galleryContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-/* Contact Styles */
-#contactContainer {
-    background: linear-gradient(45deg, darkslateblue, 70%, rebeccapurple);
-    height: 100vh;
-}
-
-#contactContent {
-    grid-area: a;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-#contactContent .content {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    flex-wrap: wrap;
-    justify-content: baseline;
-    align-items: center;
-    width: 100%;
-    animation-name: floatin, invis;
-}
-
-#contactContent .content img {
-    margin: 0 0 0 5vw;
-}
-
-#contactOne {
-    animation-duration: 1s, 0s;
-    animation-delay: 0s, 0s;
-}
-
-#contactTwo {
-    animation-duration: 1s, 0.5s;
-    animation-delay: 0.5s, 0s;
-}
-
-#contactThree {
-    animation-duration: 1s, 1s;
-    animation-delay: 1s, 0s;
+.info {
+  min-height: 45svh;
 }
 
 /* Blog Styles */
-#blogContainer {
-    background: linear-gradient(45deg, slateblue, 70%, darkslateblue);
-    min-height: 100vh;
+.blog {
+  background: linear-gradient(45deg, slateblue, 70%, darkslateblue);
+  min-height: 100svh;
 }
 
-#blogContent {
-    grid-area: a;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.blogBody {
+  text-align: justify;
+  width: 100vw;
+  padding: 1em 5em;
 }
 
-#blogContent .content {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    animation-name: floatin, invis;
-}
-
-#blogContent .content img {
-    margin: 0 0 0 5vw;
-}
-
-#blogOne {
-    animation-duration: 1s, 0s;
-    animation-delay: 0s, 0s;
-}
-
-#blogTwo {
-    animation-duration: 1s, 0.5s;
-    animation-delay: 0.5s, 0s;
-}
-
-#blogThree {
-    animation-duration: 1s, 1s;
-    animation-delay: 1s, 0s;
-}
-
-#blogBody {
-    grid-area: a;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: justify;
-    width: calc(100% - 10em);
-    padding: 1em 5em;
-}
-
-/* Halloween Styles */
-#halloweenLanding {
-    background-image: url("../halloween/splash.png");
-    background-repeat: no-repeat;
-    background-size: auto 75%;
-    background-position: bottom right;
-    height: 100vh;
-    animation-name: fade, invis;
-    animation-duration: 1s, 0s;
-    animation-delay: 0s, 0s;
-}
-
-#halloweenNav {
-    color: #666;
-    animation-name: floatdown, invis;
-    animation-duration: 1s, 9s;
-    animation-delay: 9s, 0s;
-}
-
-#halloweenTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: goldenrod;
-    font-weight: bold;
-    font-family: 'Rock Salt', cursive;
-    grid-area: a;
-    font-size: 7em;
-    padding: 2% 0%;
-    animation-name: floatdown, invis;
-    animation-duration: 2s, 2s;
-    animation-delay: 2s, 0s;
-}
-
-#halloweenDescription {
-    grid-area: b;
-    padding: 0% 10%;
-    animation-name: fade, invis;
-    animation-duration: 1.5s, 5s;
-    animation-delay: 5s, 0s;
-}
-
-#halloweenDownload {
-    grid-area: c;
-    animation-name: fade, invis;
-    animation-duration: 1.5s, 5.5s;
-    animation-delay: 5.5s, 0s;
-}
-
-/* Mobile Only Styles*/
-@media only screen and (max-aspect-ratio: 69/100) {
-    h2 {
-        font-size: 6vw;
-    }
-
-    p {
-        font-size: 4vw;
-    }
-
-    h4 {
-        font-size: 3vw;
-    }
-
-    img {
-        height: 40vw;
-        width: 40vw;
-    }
-
-    .nav {
-        width: 100%;
-        justify-content: space-around;
-    }
-
-    .nav a {
-        padding: 1em 0em;
-        font-size: 5vw;
-    }
-
-    .leaf {
-        width: 25vw;
-        height: 25vw;
-        margin: 10vw 2vw;
-    }
-
-    .leaf p {
-        width: 30vw;
-        position: relative;
-        top: 25vw;
-        left: -2.5vw;
-        font-weight: bold;
-        font-size: 3vw;
-    }
-
-    .tile {
-        width: 100%;
-        min-height: 56vw;
-        color: white;
-        margin: 0 0 4vw 0;
-    }
-
-    .information {
-        background: transparent;
-    }
-
-    .information p,
-    h4 {
-        margin: 0 10vw;
-    }
-
-    .download {
-        display: none;
-    }
-
-    .nodownload {
-        display: flex;
-    }
-
-    .exception {
-        display: flex;
-    }
-
-    #aboutOne h1 {
-        font-size: 20vw;
-    }
-
-    #teams div {
-        width: 80vw;
-        margin: 0 4vw 4vw 4vw;
-    }
-
-    #halloweenLanding {
-        background-size: auto 40vh;
-        background-position: bottom center;
-    }
-
-    #halloweenDownload {
-        background: linear-gradient(transparent, black);
-        position: absolute;
-        width: 100vw;
-        bottom: 0vh;
-        padding: 0 0 1vh 0;
-    }
-}
-
-/* Tablet Only Styles*/
-@media only screen and (min-aspect-ratio: 69/100) and (max-aspect-ratio: 4/3) {
-
-    .information p,
-    h4 {
-        margin: 0 20px;
-    }
-
-    .download {
-        display: none;
-    }
-
-    .nodownload {
-        display: flex;
-    }
-
-    .exception {
-        display: flex;
-    }
-
-    .back {
-        display: none;
-    }
-
-    #aboutContainer {
-        display: grid;
-        grid-template-columns: 1fr 6fr 6fr 1fr;
-        grid-template-areas:
-            "landing landing landing landing"
-            "x a a y"
-            "x a a y"
-            "x b c y"
-            "d d d d"
-    }
-
-    #aboutTwo {
-        justify-content: flex-start;
-    }
-
-    #aboutThree {
-        justify-content: flex-start;
-    }
-
-    #teams div {
-        width: 50vw;
-        margin: 0 4vw 4vw 4vw;
-    }
-
-    #contactContainer {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 5vh 5vh 80vh 5vh;
-        grid-template-areas:
-            "landing landing landing"
-            "x x x"
-            "y a z"
-            "y b z"
-    }
-
-    #blogContainer {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 5vh 5vh auto 5vh;
-        grid-template-areas:
-            "landing landing landing"
-            "x x x"
-            "y a z"
-            "y b z"
-    }
-
-    #halloweenLanding {
-        background-size: 40% auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto 2fr 1fr 1fr 5vh;
-        grid-template-areas:
-            "nav nav nav"
-            "a a a"
-            "b b d"
-            "c c d"
-            "e e e"
-    }
-}
-
-/* Desktop Only Styles */
-@media only screen and (min-aspect-ratio: 4/3) {
-    input[type="checkbox"]:not(:checked)+.hiddenText {
-        height: 0;
-        opacity: 0;
-    }
-
-    .information {
-        display: none;
-    }
-
-    .information p,
-    h4 {
-        margin: 0 20px;
-    }
-
-    .back {
-        display: none;
-    }
-
-    #aboutContainer {
-        display: grid;
-        grid-template-columns: 1fr 6fr 3fr 1fr;
-        grid-template-areas:
-            "landing landing landing landing"
-            "a a b x"
-            "a a c x"
-            "d d d d"
-    }
-
-    #aboutTwo {
-        justify-content: center;
-    }
-
-    #aboutTwo div {
-        cursor: pointer;
-    }
-
-    #aboutThree {
-        justify-content: center;
-    }
-
-    #aboutThree div {
-        cursor: pointer;
-    }
-
-    #teams div {
-        width: 20vw;
-        padding: 2vw;
-        margin: 1vw;
-        cursor: pointer;
-    }
-
-    #contactContainer {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 5vh 5vh 80vh 5vh;
-        grid-template-areas:
-            "landing landing landing"
-            "x x x"
-            "y a z"
-            "y b z"
-    }
-
-    #blogContainer {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        grid-template-rows: 5vh 5vh auto 5vh;
-        grid-template-areas:
-            "landing landing landing"
-            "x x x"
-            "y a z"
-            "y b z"
-    }
-
-    #blogBody {
-        max-width: 750px;
-    }
-
-    #halloweenLanding {
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-        grid-template-rows: auto 2fr 1fr 1fr 5vh;
-        grid-template-areas:
-            "nav nav nav nav nav"
-            "x a a z y"
-            "x b b z y"
-            "x c c d y"
-            "e e e e e"
-    }
+.branch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
