@@ -1,7 +1,7 @@
 /* Global Element Styles */
 body {
   width: 100vw;
-  height: 100lvh;
+  height: 100svh;
   min-width: 600px;
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: calc(max(2lvh, 12pt));
+  font-size: calc(max(2svh, 12pt));
 }
 
 a {
@@ -26,8 +26,8 @@ img {
   margin: 0 auto 0 auto;
   min-width: 200px;
   min-height: 200px;
-  width: 10lvh;
-  height: 10lvh;
+  width: 10svh;
+  height: 10svh;
 }
 
 table {
@@ -50,7 +50,7 @@ td {
 /* Global Class Styles */
 .container {
   width: 100vw;
-  min-height: 100lvh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,17 +87,17 @@ td {
 
 /* About Styles */
 .about {
-  min-height: 100lvh;
+  min-height: 100svh;
 }
 
 .info {
-  min-height: 67lvh;
+  min-height: 67svh;
 }
 
 /* Blog Styles */
 .blog {
   background: linear-gradient(45deg, slateblue, 70%, darkslateblue);
-  min-height: 100lvh;
+  min-height: 100svh;
 }
 
 .blogBody {
