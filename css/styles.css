@@ -1,6 +1,6 @@
 /* Global Element Styles */
 body {
-  width: 100vw;
+  width: 100%;
   height: 100svh;
   min-width: 600px;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: calc(max(2svh, 12pt));
+  font-size: calc(min(max(2svh, 14pt), 40px));
 }
 
 a {
@@ -49,7 +49,7 @@ td {
 
 /* Global Class Styles */
 .container {
-  width: 100vw;
+  width: 100%;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ td {
 }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

@@ -17,6 +17,8 @@
       window.location = "https://libra.tonz.io"
     } else if (path.match(/halloween/ig)) {
       window.location = "https://mcteamster.itch.io/halloween"
+    } else {
+      window.history.replaceState({}, documment.title, "/"); 
     }
   </script>
 </head>
@@ -39,30 +41,30 @@
 
     <div class="content info">
       <h1>Experience</h1>
-      <h2>
-        DevOps @ Versent (Telstra) 
-        <br>
-        2021-Present
-      </h2>
-      <h2>
-        Consultant @ HPE
-        <br>
-        2017-2021
-      </h2>
-      <h2>
-        Intern @ KPMG
-        <br>
-        2015-2016
-      </h2>
+      <div>
+        <h2>DevOps @ Versent (Telstra)</h2>
+        <p>2021-Present</p>
+      </div>
+      <div>
+        <h2>Consultant @ HPE</h2>
+        <p>2017-2021</p>
+      </div>
+      <div>
+        <h2>Intern @ KPMG</h2>
+        <p>2015-2016</p>
+      </div>
     </div>
 
     <div class="content info">
       <h1>Education</h1>
       <h2> B.Engineering @ ANU </h2>
-      <p> Electronic and Mechatronic Systems </p>
-      <p> 2016 First Class Honours <br>
-        <i> 'Design&nbsp;and Implementation&nbsp;of&nbsp;Power-<br>
-          Efficient&nbsp;Solar&nbsp;Electric Vehicle&nbsp;Control' </i>
+      <h3> Electronic and Mechatronic Systems </h3>
+      <p>
+        2016 First Class Honours<br>
+        <i>
+          'Design&nbsp;and Implementation&nbsp;of&nbsp;Power-<br>
+          Efficient&nbsp;Solar&nbsp;Electric Vehicle&nbsp;Control'
+        </i>
       </p>
     </div>
   </div>
