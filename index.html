@@ -10,7 +10,11 @@
     // Redirects
     const path = window.location.pathname;
     if (path.match(/blog/ig)) {
-      window.location = "https://tonz.io/blog/index.html"
+      if (path.match(/blog\/\d$/ig)) {
+        window.location = `https://tonz.io/blog/${path.charAt(path.length-1)}.html`
+      } else {
+        window.location = "https://tonz.io/blog/index.html"
+      }
     } else if (path.match(/games/ig)) {
       window.location = "https://mcteamster.com"
     } else if (path.match(/libra/ig)) {
@@ -18,7 +22,7 @@
     } else if (path.match(/halloween/ig)) {
       window.location = "https://mcteamster.itch.io/halloween"
     } else {
-      window.history.replaceState({}, documment.title, "/"); 
+      window.history.replaceState({}, document.title, "/"); 
     }
   </script>
 </head>
