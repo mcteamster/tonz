@@ -9,7 +9,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: calc(max(2svh, 12pt));
+  font-size: calc(min(max(2svh, 14pt), 40px));
 }
 
 a {
