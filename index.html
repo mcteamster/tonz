@@ -17,6 +17,8 @@
       window.location = "https://libra.tonz.io"
     } else if (path.match(/halloween/ig)) {
       window.location = "https://mcteamster.itch.io/halloween"
+    } else {
+      window.history.replaceState({}, documment.title, "/"); 
     }
   </script>
 </head>
