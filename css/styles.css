@@ -9,7 +9,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: calc(min(max(2svh, 14pt), 40px));
+  font-size: 14pt;
 }
 
 a {
@@ -120,4 +120,11 @@ td {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* Portrait */
+@media only screen and (orientation: portrait) and (max-device-width: 568px) {
+  body {
+    font-size: 40px;
+  }
 }
