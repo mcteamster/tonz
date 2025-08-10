@@ -88,6 +88,7 @@ td {
 /* About Styles */
 .about {
   min-height: 100svh;
+  font-size: 1.5em;
 }
 
 .info {
