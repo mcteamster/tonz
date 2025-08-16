@@ -9,7 +9,6 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: 1.5em;
 }
 
 a {
@@ -102,7 +101,7 @@ td {
 }
 
 .blogBody {
-  max-width: 40em;
+  max-width: 50em;
   text-align: justify;
 }
 
