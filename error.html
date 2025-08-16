@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+
+<head>
+  <title> Tonz </title>
+  <style>
+    body {
+      height: 100%;
+      width: 100vw;
+      background: linear-gradient(120deg, steelblue, 25%, midnightblue);
+    }
+  </style>
+  <script>
+    // Legacy Redirects
+    const path = window.location.pathname;
+    if (path.match(/blog/ig)) {
+      if (path.match(/blog\/\d$/ig)) {
+        window.location = `https://tonz.io/blog/${path.charAt(path.length - 1)}.html`
+      } else {
+        window.location = "https://tonz.io/blog/index.html"
+      }
+    } else if (path.match(/games/ig)) {
+      window.location = "https://mcteamster.com"
+    } else if (path.match(/libra/ig)) {
+      window.location = "https://libra.tonz.io"
+    } else if (path.match(/halloween/ig)) {
+      window.location = "https://mcteamster.itch.io/halloween"
+    } else {
+      // window.location = "https://tonz.io"
+    }
+  </script>
+  <meta http-equiv="refresh" content="1; url=https://tonz.io" />
+</head>

@@ -6,25 +6,6 @@
   <link rel="shortcut icon" href="img/iconA.png" type="image/x-icon">
   <link rel="icon" href="img/iconA.png" type="image/x-icon">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
-  <script>
-    // Redirects
-    const path = window.location.pathname;
-    if (path.match(/blog/ig)) {
-      if (path.match(/blog\/\d$/ig)) {
-        window.location = `https://tonz.io/blog/${path.charAt(path.length-1)}.html`
-      } else {
-        window.location = "https://tonz.io/blog/index.html"
-      }
-    } else if (path.match(/games/ig)) {
-      window.location = "https://mcteamster.com"
-    } else if (path.match(/libra/ig)) {
-      window.location = "https://libra.tonz.io"
-    } else if (path.match(/halloween/ig)) {
-      window.location = "https://mcteamster.itch.io/halloween"
-    } else {
-      window.history.replaceState({}, document.title, "/"); 
-    }
-  </script>
 </head>
 
 <body>
