@@ -9,7 +9,7 @@ body {
   color: white;
   text-align: center;
   font-family: 'Trebuchet MS', Arial, monospace;
-  font-size: 14pt;
+  font-size: 1.5em;
 }
 
 a {
@@ -125,6 +125,6 @@ td {
 /* Portrait */
 @media only screen and (orientation: portrait) and (max-device-width: 568px) {
   body {
-    font-size: 40px;
+    font-size: 2em;
   }
 }
