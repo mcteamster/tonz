@@ -101,12 +101,12 @@ td {
 }
 
 .blogBody {
+  padding: 3em 0;
   max-width: 50em;
   text-align: justify;
 }
 
 .title {
-  margin: 2em 0 0 0;
   text-align: center;
 }
 
